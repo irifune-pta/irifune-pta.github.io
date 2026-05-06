@@ -62,4 +62,4 @@ window.SCHEDULE = {
   "1年2組": { periods: [["2027-06-16", "2027-06-30"]] }
 };
 
-window.SITE_URL = "https://irifune-pta.github.io/";
+// 注：SITE_URL は config.js (window.CONFIG.siteUrl) に移動しました
