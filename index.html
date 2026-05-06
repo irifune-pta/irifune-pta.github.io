@@ -400,6 +400,82 @@
 
 
 
+
+  /* ===== HERO CARD CTA ===== */
+  .hero-card .card-cta{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:18px;
+    background:var(--blue-700);color:#fff;
+    padding:12px 18px;border-radius:10px;
+    text-decoration:none;font-weight:700;font-size:14px;
+    transition:transform .15s ease;
+    box-shadow:0 4px 0 var(--blue-900);
+  }
+  .hero-card .card-cta:hover{transform:translateY(-2px);background:var(--blue-900)}
+
+  /* ===== ACTIVITY FLOW DIAGRAM ===== */
+  .flow-card{
+    background:#fff;border-radius:16px;
+    border:1px solid var(--line);
+    padding:28px 24px;
+    margin-bottom:32px;
+    box-shadow:0 8px 22px -14px rgba(249,115,22,.2);
+  }
+  .flow-title{
+    font-family:'Noto Serif JP',serif;
+    font-size:18px;font-weight:900;color:var(--blue-900);
+    margin-bottom:18px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .flow-title::before{content:"";width:5px;height:20px;background:var(--coral-500);border-radius:3px}
+  .flow-steps{
+    list-style:none;display:flex;align-items:stretch;gap:14px;
+    margin:0;padding:0;
+  }
+  .flow-step{
+    flex:1;background:linear-gradient(180deg,#FFF7ED 0%,#fff 100%);
+    border:1.5px solid var(--coral-300);
+    border-radius:12px;padding:18px 16px;
+    text-align:center;
+    position:relative;
+  }
+  .flow-num{
+    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    width:30px;height:30px;border-radius:50%;
+    background:var(--coral-500);color:#fff;
+    font-weight:900;font-size:14px;
+    display:grid;place-items:center;
+    box-shadow:0 3px 0 var(--coral-700);
+  }
+  .flow-icon{font-size:32px;margin-top:8px;margin-bottom:4px;line-height:1}
+  .flow-label{
+    font-family:'Noto Serif JP',serif;
+    font-weight:900;font-size:16px;color:var(--coral-700);
+    margin-bottom:8px;
+  }
+  .flow-desc{font-size:13px;line-height:1.7;color:var(--ink-soft)}
+  .flow-desc b{color:var(--coral-700)}
+  .flow-arrow{
+    align-self:center;font-size:24px;color:var(--coral-500);font-weight:900;
+    flex:0 0 auto;
+  }
+  @media (max-width:760px){
+    .flow-steps{flex-direction:column;gap:8px}
+    .flow-arrow{transform:rotate(90deg);padding:4px 0}
+  }
+
+  /* ===== PRIVACY NOTE ===== */
+  .privacy-note{
+    margin-top:18px !important;
+    font-size:12px !important;
+    color:var(--ink-soft) !important;
+    line-height:1.7 !important;
+    background:#fff;border:1px solid var(--coral-300);
+    border-radius:8px;padding:10px 14px;
+    text-align:left;
+  }
+  .privacy-note b{color:var(--coral-700)}
+
   /* ===== RESERVATION & REPORT (Coral / Activity C) ===== */
   .report-section{
     background:linear-gradient(180deg,var(--coral-100) 0%,#fff 100%);
@@ -676,6 +752,7 @@
       <div class="row"><span>活動B</span><b>放課後 安全パトロール</b></div>
       <div class="row"><span>1期間あたりの目安</span><b>2回以上</b></div>
       <div class="row"><span>予約・記録</span><b>Googleフォーム</b></div>
+      <a href="#report" class="card-cta">📋 予約・報告フォームへ</a>
     </div>
   </div>
 </header>
@@ -978,11 +1055,42 @@
     <h2>活動予約・実績報告</h2>
     <p class="section-lead">見守り活動の予約と、終了後の実績報告はこちらからお願いします。フォームを通じて事前予約することで、現場での重複を減らすことができます。</p>
 
+    <!-- Flow visualization -->
+    <div class="flow-card">
+      <div class="flow-title">活動の流れ</div>
+      <ol class="flow-steps">
+        <li class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-icon">📅</div>
+          <div class="flow-label">予約する</div>
+          <div class="flow-desc">担当期間内のご都合のよい日時を、Googleフォームで予約します。</div>
+        </li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-icon">🛡</div>
+          <div class="flow-label">当日活動する</div>
+          <div class="flow-desc">予約した時間・場所で、登校時の見守り or 放課後パトロールを行います。</div>
+        </li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-icon">✅</div>
+          <div class="flow-label">報告する</div>
+          <div class="flow-desc">活動後、予約時の確認メールから「<b>回答を編集</b>」して実績報告に切り替えます。</div>
+        </li>
+      </ol>
+    </div>
+
     <!-- Form CTA -->
     <div class="form-cta">
       <h3>予約・報告を行う</h3>
       <p>活動予定の登録、または活動終了後の実績報告を送信してください。</p>
       <a href="https://forms.gle/ZjnCw7hAVvPRPzG7A" class="btn-large" target="_blank" rel="noopener">Googleフォームを開く</a>
+      <p class="privacy-note">
+        🔒 入力された情報（お名前・クラス・活動日時）はGoogleのサーバーに保存され、
+        <b>PTA安全指導部のみが閲覧します</b>。第三者への提供や、ご本人の同意なく目的外で利用することはありません。
+      </p>
     </div>
 
     <!-- Reservation Status -->
@@ -1069,30 +1177,12 @@
 </script>
 
 
+<script src="schedule.js"></script>
 <script>
 (function(){
-  // Class schedule data — keep in sync with HTML grade cards
-  const SCHEDULE = {
-    "6年1組": {periods:[["2026-07-01","2026-07-15"]]},
-    "6年2組": {periods:[["2026-07-16","2026-07-21"],["2026-09-01","2026-09-15"]], note:"夏季休業期間を除く"},
-    "6年3組": {periods:[["2026-09-16","2026-10-02"]]},
-    "5年1組": {periods:[["2026-10-05","2026-10-21"]]},
-    "5年2組": {periods:[["2026-10-22","2026-11-06"]]},
-    "5年3組": {periods:[["2026-11-09","2026-11-20"]]},
-    "4年1組": {periods:[["2026-11-24","2026-12-08"]]},
-    "4年2組": {periods:[["2026-12-09","2026-12-24"]]},
-    "4年3組": {periods:[["2027-01-06","2027-01-22"]]},
-    "3年1組": {periods:[["2027-01-25","2027-02-09"]]},
-    "3年2組": {periods:[["2027-02-10","2027-02-26"]]},
-    "3年3組": {periods:[["2027-03-01","2027-03-17"]]},
-    "2年1組": {periods:[["2027-03-18","2027-03-24"],["2027-04-07","2027-04-16"]], note:"学年末・学年始休業期間を除く"},
-    "2年2組": {periods:[["2027-04-19","2027-05-07"]]},
-    "2年3組": {periods:[["2027-05-10","2027-05-25"]]},
-    "1年1組": {periods:[["2027-05-26","2027-06-14"]]},
-    "1年2組": {periods:[["2027-06-16","2027-06-30"]]}
-  };
-
-  const SITE_URL = "https://irifune-pta.github.io/";
+  // SCHEDULE & SITE_URL are loaded from schedule.js (window.SCHEDULE / window.SITE_URL)
+  const SCHEDULE = window.SCHEDULE || {};
+  const SITE_URL = window.SITE_URL || "";
 
   function pad(n){ return String(n).padStart(2,"0"); }
   function fmtDate(s){ return s.replace(/-/g,""); }
