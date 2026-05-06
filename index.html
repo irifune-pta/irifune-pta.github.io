@@ -25,6 +25,10 @@
     --yellow-soft:#FFF6D1;
     --coral:#FF8A65;
     --pink:#FFC4C4;
+    --coral-700:#C2410C;
+    --coral-500:#F97316;
+    --coral-300:#FDBA74;
+    --coral-100:#FFF7ED;
     --ink:#2D3748;
     --ink-soft:#5A6478;
     --paper:#FFFEFB;
@@ -395,6 +399,115 @@
 
 
 
+
+  /* ===== RESERVATION & REPORT (Coral / Activity C) ===== */
+  .report-section{
+    background:linear-gradient(180deg,var(--coral-100) 0%,#fff 100%);
+    color:var(--ink);
+  }
+  .report-section .eyebrow{background:#FFE7CC;color:var(--coral-700)}
+  .report-section h2{color:var(--blue-900);text-shadow:none}
+  .report-section .section-lead{color:var(--ink-soft)}
+
+  /* Activity-style header tag for section "C" */
+  .report-header{
+    display:flex;align-items:center;gap:18px;margin-bottom:22px;
+  }
+  .report-tag{
+    width:64px;height:64px;border-radius:14px;
+    background:var(--coral-500);color:#fff;
+    display:grid;place-items:center;
+    font-family:'Noto Serif JP',serif;font-weight:900;font-size:30px;
+    box-shadow:0 8px 20px -8px rgba(249,115,22,.55);
+    flex-shrink:0;
+  }
+
+  .form-cta{
+    background:linear-gradient(135deg,#FFF7ED 0%,#fff 100%);
+    border:2px solid var(--coral-300);
+    border-radius:18px;
+    padding:32px 28px;
+    text-align:center;
+    box-shadow:0 14px 32px -16px rgba(249,115,22,.4);
+    margin-bottom:32px;
+    position:relative;
+  }
+  .form-cta::before{
+    content:"";position:absolute;top:-3px;left:28px;
+    width:60px;height:6px;background:var(--coral-500);border-radius:3px;
+  }
+  .form-cta h3{
+    font-family:'Noto Serif JP',serif;
+    font-size:22px;color:var(--coral-700);
+    margin-bottom:8px;
+  }
+  .form-cta p{color:var(--ink-soft);font-size:14.5px;margin-bottom:16px}
+  .form-cta .btn-large{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--coral-500);color:#fff;
+    padding:14px 32px;border-radius:999px;
+    font-weight:700;font-size:16px;text-decoration:none;
+    box-shadow:0 6px 0 var(--coral-700);
+    transition:transform .15s ease;
+  }
+  .form-cta .btn-large:hover{transform:translateY(-2px)}
+  .form-cta .btn-large::after{content:"→";font-size:18px}
+
+  .embed-card{
+    background:#fff;border-radius:16px;
+    border:1px solid var(--line);
+    padding:28px;
+    box-shadow:0 10px 28px -16px rgba(249,115,22,.2);
+    margin-bottom:24px;
+  }
+  .embed-card h3{
+    font-family:'Noto Serif JP',serif;
+    font-size:20px;color:var(--blue-900);
+    margin-bottom:12px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .embed-card h3::before{content:"";width:5px;height:22px;background:var(--coral-500);border-radius:3px}
+  .embed-card .hint{
+    font-size:13px;color:var(--ink-soft);margin-bottom:14px;
+  }
+  .embed-warn{
+    background:#FFF7ED;
+    border-left:4px solid var(--coral-500);
+    border-radius:0 8px 8px 0;
+    padding:14px 18px;
+    font-size:14px;line-height:1.85;
+    color:var(--ink);
+    margin-bottom:14px;
+  }
+  .embed-warn b{color:var(--coral-700)}
+  .iframe-wrap{
+    position:relative;width:100%;
+    padding-top:70%;
+    border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;
+    background:#fff;
+  }
+  .iframe-wrap.tall{padding-top:50%}
+  .iframe-wrap.chart{padding-top:50%}
+  .iframe-wrap iframe{
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    border:0;
+  }
+  .open-link{
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:10px;font-size:13px;
+    color:var(--coral-700);text-decoration:none;font-weight:600;
+  }
+  .open-link:hover{text-decoration:underline}
+  .open-link::after{content:"↗"}
+  @media (max-width:880px){
+    .iframe-wrap{padding-top:140%}
+    .iframe-wrap.tall{padding-top:80%}
+    .iframe-wrap.chart{padding-top:100%}
+    .form-cta{padding:24px 18px}
+    .report-tag{width:54px;height:54px;font-size:24px}
+  }
+
   /* ===== CALENDAR BUTTON ===== */
   .class-row{position:relative}
   .cal-btn{
@@ -536,7 +649,7 @@
       <a href="#schedule">年間予定</a>
       <a href="#morning">登校時安全指導</a>
       <a href="#patrol">放課後パトロール</a>
-      <a href="#report">活動記録</a>
+      <a href="#report">予約・実績</a>
     </div>
   </div>
 </nav>
@@ -562,7 +675,7 @@
       <div class="row"><span>活動A</span><b>登校時 安全指導</b></div>
       <div class="row"><span>活動B</span><b>放課後 安全パトロール</b></div>
       <div class="row"><span>1期間あたりの目安</span><b>2回以上</b></div>
-      <div class="row"><span>記録方法</span><b>Googleフォーム回答</b></div>
+      <div class="row"><span>予約・記録</span><b>Googleフォーム</b></div>
     </div>
   </div>
 </header>
@@ -603,7 +716,7 @@
     <h2>令和8年度 年間予定表</h2>
     <p class="section-lead">各学年・各クラスの担当期間です。ご自身のクラスの担当週をご確認ください。</p>
     <div class="schedule-img">
-      <img class="zoomable" src="images/安全活動年間予定表v2.png?v=1777441179" alt="令和8年度 PTA安全活動 年間予定表" data-caption="令和8年度 PTA安全活動 年間予定表">
+      <img class="zoomable" src="images/安全活動年間予定表v2.png" alt="令和8年度 PTA安全活動 年間予定表" data-caption="令和8年度 PTA安全活動 年間予定表">
     </div>
 
     <div class="grade-section">
@@ -751,7 +864,7 @@
     <div class="activity-grid">
       <div class="map-frame">
         <div class="cap"><span>安全指導 実施場所マップ</span><span class="pill">A エリア</span></div>
-        <img class="zoomable" src="images/A.登校時安全指導v2.png?v=1777441179" alt="登校時安全指導 実施場所マップ" data-caption="A. 登校時安全指導 実施場所マップ">
+        <img class="zoomable" src="images/A.登校時安全指導v2.png" alt="登校時安全指導 実施場所マップ" data-caption="A. 登校時安全指導 実施場所マップ">
       </div>
 
       <div>
@@ -808,7 +921,7 @@
     <div class="activity-grid">
       <div class="map-frame">
         <div class="cap"><span>放課後パトロール 実施場所マップ</span><span class="pill">B エリア</span></div>
-        <img class="zoomable" src="images/B.放課後安全パトロールv2.png?v=1777441179" alt="放課後安全パトロール 実施場所マップ" data-caption="B. 放課後安全パトロール 実施場所マップ">
+        <img class="zoomable" src="images/B.放課後安全パトロールv2.png" alt="放課後安全パトロール 実施場所マップ" data-caption="B. 放課後安全パトロール 実施場所マップ">
       </div>
 
       <div>
@@ -858,27 +971,43 @@
   </div>
 </section>
 
-<!-- ===== 実施記録の回答 ===== -->
+<!-- ===== 予約・実績報告 ===== -->
 <section id="report" class="report-section">
   <div class="container">
-    <span class="eyebrow">ACTIVITY REPORT</span>
-    <h2>実施記録の回答</h2>
-    <p class="section-lead">安全活動を行った後、下記のフォームよりご回答をお願いいたします。記録は今後の活動運営の参考にいたします。</p>
+    <span class="eyebrow">RESERVATION &amp; REPORT</span>
+    <h2>活動予約・実績報告</h2>
+    <p class="section-lead">見守り活動の予約と、終了後の実績報告はこちらからお願いします。フォームを通じて事前予約することで、現場での重複を減らすことができます。</p>
 
-    <div class="report-card">
-      <div>
-        <h3>活動後はGoogleフォームへ</h3>
-        <p>下のリンクまたは右のQRコードからアクセスできます。スマートフォンからの入力にも対応しています。</p>
-        <div class="url-box">
-          <span>🔗</span>
-          <span>https://docs.google.com/forms/d/e/1FAIpQLSelY3CxJTqb_o1NJQZwHpYeL3PAz6Rym6sV-zFaI569_GyagQ/viewform</span>
-        </div>
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSelY3CxJTqb_o1NJQZwHpYeL3PAz6Rym6sV-zFaI569_GyagQ/viewform?pli=1" target="_blank" rel="noopener">フォームを開く</a>
+    <!-- Form CTA -->
+    <div class="form-cta">
+      <h3>予約・報告を行う</h3>
+      <p>活動予定の登録、または活動終了後の実績報告を送信してください。</p>
+      <a href="https://forms.gle/ZjnCw7hAVvPRPzG7A" class="btn-large" target="_blank" rel="noopener">Googleフォームを開く</a>
+    </div>
+
+    <!-- Reservation Status -->
+    <div class="embed-card">
+      <h3>現在の予約状況</h3>
+      <div class="embed-warn">
+        <b>【運用ルールとご注意】</b><br>
+        ・予約完了メールの「回答を編集」から報告を行うと、予約情報が自動的に実績報告へと切り替わり、予約からは無くなります。<br>
+        ・同じ時間帯に複数の方が予約されている場合は、現場の状況に合わせて、保護者様同士で譲り合ったり分担したりしながら進めていただければ幸いです。
       </div>
-      <div class="qr-wrap">
-        <img src="images/image8.png" alt="活動記録フォームのQRコード">
-        <div class="qr-label">QRコードでアクセス</div>
+      <p class="hint">※反映まで数分かかる場合があります。</p>
+      <div class="iframe-wrap tall">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDd70tKmMUTkvLCNe-ZmiVmOD39GNkBXakZplDR04iqVk-4HmNgOTf2Opkm0Cq7b2CZr6C0cho0LOB/pubhtml?gid=441163628&amp;single=true&amp;widget=true&amp;headers=false" loading="lazy" title="現在の予約状況"></iframe>
       </div>
+      <a class="open-link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDd70tKmMUTkvLCNe-ZmiVmOD39GNkBXakZplDR04iqVk-4HmNgOTf2Opkm0Cq7b2CZr6C0cho0LOB/pubhtml?gid=441163628" target="_blank" rel="noopener">予約状況を全画面で開く</a>
+    </div>
+
+    <!-- Activity Records -->
+    <div class="embed-card">
+      <h3>活動実績の公開</h3>
+      <p class="hint">各クラスの活動状況を集計しています。皆様の活動をグラフに反映するため、終了後の報告入力にご協力をお願いいたします。</p>
+      <div class="iframe-wrap chart">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDd70tKmMUTkvLCNe-ZmiVmOD39GNkBXakZplDR04iqVk-4HmNgOTf2Opkm0Cq7b2CZr6C0cho0LOB/pubchart?oid=1906612166&amp;format=interactive" loading="lazy" title="活動実績の公開"></iframe>
+      </div>
+      <a class="open-link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDd70tKmMUTkvLCNe-ZmiVmOD39GNkBXakZplDR04iqVk-4HmNgOTf2Opkm0Cq7b2CZr6C0cho0LOB/pubchart?oid=1906612166" target="_blank" rel="noopener">グラフを全画面で開く</a>
     </div>
   </div>
 </section>
@@ -915,8 +1044,11 @@
     img.alt = caption || '';
     cap.textContent = caption || '';
     dl.href = src;
-    // download filename = last segment
-    try { dl.setAttribute('download', decodeURIComponent(src.split('/').pop())); } catch(e){}
+    // download filename = last segment, stripped of query string and hash
+    try {
+      let name = src.split('/').pop().split('?')[0].split('#')[0];
+      dl.setAttribute('download', decodeURIComponent(name));
+    } catch(e){}
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
@@ -960,7 +1092,7 @@
     "1年2組": {periods:[["2027-06-16","2027-06-30"]]}
   };
 
-  const SITE_URL = "https://irifune-anzen.netlify.app/";
+  const SITE_URL = "https://irifune-pta.github.io/";
 
   function pad(n){ return String(n).padStart(2,"0"); }
   function fmtDate(s){ return s.replace(/-/g,""); }
@@ -992,7 +1124,7 @@
       const desc = "担当期間内に2回以上のご活動をお願いいたします。\n\n登校時 安全指導 と 放課後 安全パトロール のいずれかを 2回以上、ご都合のよい日にお願いします。\n\n詳細・地図・予約: " + SITE_URL + (info.note ? "\n\n※ " + info.note : "");
       lines.push(
         "BEGIN:VEVENT",
-        "UID:" + cls + "-" + i + "@irifune-anzen.netlify.app",
+        "UID:" + cls + "-" + i + "@irifune-pta.github.io",
         "DTSTAMP:" + stamp,
         "DTSTART;VALUE=DATE:" + dtStart,
         "DTEND;VALUE=DATE:" + dtEnd,
