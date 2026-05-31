@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" width="420" height="280" font-family="sans-serif">
+
+  <!-- 校庭ラベル -->
+  <text x="60" y="28" font-size="15" fill="#333">校庭</text>
+
+  <!-- 体育館（左の建物） -->
+  <rect x="10" y="50" width="80" height="160" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="50" y="138" font-size="15" fill="#333" text-anchor="middle">体育館</text>
+
+  <!-- 校舎（右の建物） -->
+  <rect x="330" y="50" width="80" height="160" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="370" y="138" font-size="15" fill="#333" text-anchor="middle">校舎</text>
+
+  <!-- 渡り廊下（点線の大きな枠） -->
+  <rect x="100" y="110" width="220" height="90" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="150" y="175" font-size="13" fill="#333">渡り廊下</text>
+
+  <!-- 物置（点線の小さな枠） -->
+  <rect x="240" y="118" width="68" height="68" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="274" y="135" font-size="12" fill="#333" text-anchor="middle">物置</text>
+
+  <!-- ★マーク -->
+  <text x="274" y="170" font-size="26" fill="#111" text-anchor="middle">★</text>
+
+</svg>
