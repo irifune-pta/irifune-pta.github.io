@@ -776,7 +776,7 @@
     <div class="nav-links">
       <a href="#notice">お知らせ</a>
       <a href="#schedule">年間予定</a>
-      <a href="#morning">登校時安全指導</a>
+      <a href="#morning">登校時旗振り</a>
       <a href="#patrol">放課後パトロール</a>
       <a href="#report">予約・実績</a>
     </div>
@@ -793,7 +793,7 @@
         <span class="accent">みんなで見守る。</span>
       </h1>
       <p class="lead">
-        入船小学校PTA安全活動は、登校時の見守りと放課後のパトロールを通じて、
+        入船小学校PTA安全活動は、登校時の旗振りと放課後のパトロールを通じて、
         子どもたちが安心して学校に通える環境づくりを行っています。
         今年度より、保護者の皆さまの負担を減らしつつ、より多くの大人の目で見守れる新しい運用を試行しています。
       </p>
@@ -801,7 +801,7 @@
     <div class="hero-card">
       <h3>活動の概要</h3>
       <div class="row"><span>対象</span><b>入船小学校 全保護者</b></div>
-      <div class="row"><span>活動A</span><b>登校時 安全指導</b></div>
+      <div class="row"><span>活動A</span><b>登校時 旗振り</b></div>
       <div class="row"><span>活動B</span><b>放課後 安全パトロール</b></div>
       <div class="row"><span>1期間あたりの目安</span><b>2回以上</b></div>
       <div class="row"><span>予約・記録</span><b>Googleフォーム</b></div>
@@ -987,15 +987,15 @@
       <div class="activity-tag">A</div>
       <div>
         <span class="eyebrow">MORNING SAFETY GUIDANCE</span>
-        <h2>登校時 安全指導</h2>
+        <h2>登校時 旗振り</h2>
       </div>
     </div>
     <p class="section-lead">通学路の主要な交差点で、子どもたちの登校を見守ります。担当エリアと注意点をご確認ください。</p>
 
     <div class="activity-grid">
       <div class="map-frame">
-        <div class="cap"><span>安全指導 実施場所マップ</span><span class="pill">A エリア</span></div>
-        <img class="zoomable" src="images/A.登校時安全指導.png" alt="登校時安全指導 実施場所マップ" data-caption="A. 登校時安全指導 実施場所マップ">
+        <div class="cap"><span>旗振り 実施場所マップ</span><span class="pill">A エリア</span></div>
+        <img class="zoomable" src="images/A.登校時安全指導.png" alt="登校時旗振り 実施場所マップ" data-caption="A. 登校時旗振り 実施場所マップ">
       </div>
 
       <div>
@@ -1016,7 +1016,7 @@
 
     <div class="flag-info">
       <h3>安全旗について</h3>
-      <p>登校時安全指導では「安全旗」を使用します。以下のいずれかの方法でご用意ください。</p>
+      <p>登校時旗振りでは「安全旗」を使用します。以下のいずれかの方法でご用意ください。</p>
       <div class="flag-steps">
 
         <div style="margin-bottom:18px;">
@@ -1057,7 +1057,7 @@
         <h2>放課後 安全パトロール</h2>
       </div>
     </div>
-    <p class="section-lead">放課後のチェックポイントを巡回し、子どもたちの安全を見守ります。腕章を着用し、徒歩で活動してください。</p>
+    <p class="section-lead">放課後のチェックポイントを巡回し、子どもたちの安全を見守ります。腕章を着用し、活動してください。</p>
 
     <div class="activity-grid">
       <div class="map-frame">
@@ -1067,7 +1067,7 @@
 
       <div>
         <ol class="rule-list">
-          <li>ご自身の安全を十分に確保し、腕章を着用して、徒歩で行って下さい。</li>
+          <li>ご自身の安全を十分に確保し、腕章を着用して、行ってください。</li>
           <li>パトロールの開始場所、回り方は自由ですが下記チェックポイントを回って下さい。</li>
           <li>雨天の場合も行って下さい。</li>
           <li>各パトロール期間中、外出時はできる限り腕章の着用をお願いいたします。</li>
@@ -1117,7 +1117,7 @@
   <div class="container">
     <span class="eyebrow">RESERVATION &amp; REPORT</span>
     <h2>活動予約・実績報告</h2>
-    <p class="section-lead">見守り活動の予約と、終了後の実績報告はこちらからお願いします。フォームを通じて事前予約することで、現場での重複を減らすことができます。</p>
+    <p class="section-lead">活動の予約と、終了後の実績報告はこちらからお願いします。フォームを通じて事前予約することで、現場での重複を減らすことができます。</p>
 
     <!-- Flow visualization -->
     <div class="flow-card">
@@ -1134,7 +1134,7 @@
           <div class="flow-num">2</div>
           <div class="flow-icon">🛡</div>
           <div class="flow-label">当日活動する</div>
-          <div class="flow-desc">予約した時間・場所で、登校時の見守り or 放課後パトロールを行います。</div>
+          <div class="flow-desc">予約した時間・場所で、登校時の旗振り or 放課後パトロールを行います。</div>
         </li>
         <li class="flow-arrow" aria-hidden="true">→</li>
         <li class="flow-step">
@@ -1293,7 +1293,7 @@
       const [start, end] = p;
       const dtStart = fmtDate(start);
       const dtEnd = fmtDate(addDays(end, 1)); // ICS DTEND is exclusive
-      const desc = "担当期間内に2回以上のご活動をお願いいたします。\n\n登校時 安全指導 と 放課後 安全パトロール のいずれかを 2回以上、ご都合のよい日にお願いします。\n\n詳細・地図・予約: " + SITE_URL + (info.note ? "\n\n※ " + info.note : "");
+      const desc = "担当期間内に2回以上のご活動をお願いいたします。\n\n登校時 旗振り と 放課後 安全パトロール のいずれかを 2回以上、ご都合のよい日にお願いします。\n\n詳細・地図・予約: " + SITE_URL + (info.note ? "\n\n※ " + info.note : "");
       lines.push(
         "BEGIN:VEVENT",
         "UID:" + cls + "-" + i + "@irifune-pta.github.io",
