@@ -600,6 +600,115 @@
     position:absolute;top:0;left:0;width:100%;height:100%;
     border:0;
   }
+  /* ===== 予約状況 自前テーブル（1行目＋日付列を固定） ===== */
+  .sheet-embed{
+    position:relative;
+    max-height:460px;overflow:auto;
+    border:1px solid var(--line);border-radius:10px;
+    background:#fff;
+    -webkit-overflow-scrolling:touch;
+  }
+  .sheet-table{
+    border-collapse:separate;border-spacing:0;
+    width:max-content;min-width:100%;
+    font-size:13px;white-space:nowrap;
+  }
+  .sheet-table th,.sheet-table td{
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:7px 12px;text-align:center;
+  }
+  .sheet-table thead th{
+    position:sticky;top:0;z-index:2;
+    background:var(--coral-100);color:var(--coral-700);
+    font-weight:700;border-bottom:2px solid var(--line);
+  }
+  .sheet-table .col-date{
+    position:sticky;left:0;z-index:1;
+    background:#fff;text-align:left;font-weight:600;
+  }
+  .sheet-table thead .col-date{z-index:3;background:var(--coral-100)}
+  .sheet-table .cnt{
+    display:inline-block;min-width:18px;
+    color:var(--ink);font-weight:700;
+  }
+  /* 列の色分け：旗振り=ブルー / パトロール=グリーン */
+  .sheet-table thead th.grp-flag{background:#DBEAFE;color:#1E40AF}
+  .sheet-table thead th.grp-patrol{background:#DCFCE7;color:#166534}
+  .sheet-table tbody td.grp-flag{background:#F0F6FF}
+  .sheet-table tbody td.grp-patrol{background:#F0FBF3}
+  .sheet-table tbody td.grp-flag .cnt{color:#1D4ED8}
+  .sheet-table tbody td.grp-patrol .cnt{color:#15803D}
+  /* 予約2以上：赤セル（グループ色より後・高specificityで上書き） */
+  .sheet-table tbody tr td.hot{background:#FEE2E2}
+  .sheet-table tbody tr td.hot .cnt{color:#B91C1C}
+  .sheet-loading,.sheet-error{
+    padding:28px 16px;text-align:center;
+    color:var(--ink-soft);font-size:14px;
+  }
+
+  /* ===== スマホ向けカード表示 ===== */
+  .sheet-cards{display:none;padding:6px 4px}
+  .scard{
+    border:1px solid var(--line);border-radius:10px;
+    margin:8px 6px;overflow:hidden;background:#fff;
+  }
+  .scard-head{
+    display:flex;align-items:baseline;gap:10px;
+    padding:9px 13px;background:var(--coral-100);
+    border-bottom:1px solid var(--line);
+  }
+  .scard-date{font-weight:700;color:var(--coral-700);font-size:15px}
+  .scard-class{font-size:13px;color:var(--ink-soft);font-weight:600}
+  .scard-list{list-style:none;margin:0;padding:2px 0}
+  .scard-item{
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:8px 14px;font-size:14.5px;
+    border-bottom:1px solid #f1f3f5;
+  }
+  .scard-item:last-child{border-bottom:0}
+  .scard-loc{color:var(--ink);line-height:1.4}
+  .scard-cnt{flex:none;font-weight:700;color:var(--ink-soft);font-size:13px}
+  .scard-item.hot{background:#FEF2F2}
+  .scard-item.hot .scard-loc{color:#B91C1C;font-weight:700}
+  .scard-item.hot .scard-cnt{
+    background:#DC2626;color:#fff;
+    border-radius:999px;padding:1px 10px;
+  }
+  .scard-empty{padding:9px 14px;color:var(--ink-soft);font-size:13px}
+  /* カードのグループ色（左端アクセント） */
+  .scard-item.grp-flag{border-left:4px solid #3B82F6}
+  .scard-item.grp-flag .scard-loc{color:#1E40AF}
+  .scard-item.grp-patrol{border-left:4px solid #22C55E}
+  .scard-item.grp-patrol .scard-loc{color:#166534}
+  .scard-item.hot.grp-flag,.scard-item.hot.grp-patrol{background:#FEF2F2}
+  .scard-item.hot .scard-loc{color:#B91C1C}
+
+  /* 色分けの凡例 */
+  .sheet-legend{
+    display:flex;flex-wrap:wrap;gap:8px 16px;
+    margin:0 0 10px;font-size:12.5px;color:var(--ink-soft);
+  }
+  .sheet-legend span{display:inline-flex;align-items:center;gap:6px}
+  .sheet-legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .sheet-legend .lg-flag{background:#DBEAFE;border:1px solid #93C5FD}
+  .sheet-legend .lg-patrol{background:#DCFCE7;border:1px solid #86EFAC}
+
+  /* スマホ縦持ち（カード表示）時だけ出す案内。既定は非表示 */
+  .sheet-rotate-hint{
+    display:none;margin:0 0 10px;
+    padding:7px 12px;border-radius:8px;
+    background:#F1F5F9;color:var(--ink-soft);
+    font-size:12.5px;line-height:1.5;
+  }
+
+  /* 縦向きの狭い画面（スマホ縦持ち）だけカード表示。横向きは必ず表 */
+  @media (max-width:880px) and (orientation:portrait){
+    .sheet-embed{max-height:70vh}
+    .sheet-embed .sheet-table{display:none}
+    .sheet-embed .sheet-cards{display:block}
+    .sheet-rotate-hint{display:block}
+  }
   .open-link{
     display:inline-flex;align-items:center;gap:6px;
     margin-top:10px;font-size:13px;
@@ -767,6 +876,128 @@
     apply();
   }
 })();
+</script>
+
+<script>
+// 「現在の予約状況」: スプレッドシートの単一シートのCSVを取得し、1行目＋日付列を固定した自前テーブルで描画
+// ※ 単一gidのCSVのみ取得するため、氏名タブ等は公開されない。config.js はページ末尾で読み込まれるため DOMContentLoaded を待つ
+function initReservationStatus(){
+  const cfg = window.CONFIG || {};
+  const url = cfg.reservationStatusCsvUrl;
+  const box = document.getElementById('reservationStatus');
+  if (!box || !url) return;
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, c => (
+      {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+    ));
+  }
+
+  // ダブルクオート・改行に対応したCSVパーサ
+  function parseCSV(text){
+    const rows=[]; let row=[], val='', q=false;
+    for (let i=0; i<text.length; i++){
+      const c=text[i];
+      if (q){
+        if (c==='"'){ if (text[i+1]==='"'){ val+='"'; i++; } else { q=false; } }
+        else { val+=c; }
+      } else {
+        if (c==='"'){ q=true; }
+        else if (c===','){ row.push(val); val=''; }
+        else if (c==='\n'){ row.push(val); rows.push(row); row=[]; val=''; }
+        else if (c!=='\r'){ val+=c; }
+      }
+    }
+    if (val!=='' || row.length){ row.push(val); rows.push(row); }
+    return rows;
+  }
+
+  // 予約2以上 → 赤で強調（スプレッドシートのセル色はCSVに含まれないため、ここで再現）
+  function isHot(v){ const n = Number(v); return Number.isFinite(n) && n >= 2; }
+
+  // 見出しの表示名を config の対応表で差し替え（スプレッドシートは変えない）
+  const labelMap = cfg.reservationHeaderLabels || {};
+  function label(orig){
+    const k = String(orig).trim();
+    return (k in labelMap) ? labelMap[k] : orig;
+  }
+
+  // 列の色分け（旗振り=ブルー / パトロール=グリーン）
+  const groups = cfg.reservationColumnGroups || {};
+  const flagSet = new Set((groups.flag || []).map(s => String(s).trim()));
+  const patrolSet = new Set((groups.patrol || []).map(s => String(s).trim()));
+  function groupClass(orig){
+    const k = String(orig).trim();
+    if (flagSet.has(k)) return 'grp-flag';
+    if (patrolSet.has(k)) return 'grp-patrol';
+    return '';
+  }
+
+  function render(rows){
+    rows = rows.filter(r => r.some(c => c.trim() !== ''));
+    if (!rows.length){ box.innerHTML='<div class="sheet-error">予約状況のデータがまだありません。</div>'; return; }
+    const head = rows[0], body = rows.slice(1);
+
+    // ── PC・タブレット向け：1行目＋日付列を固定した表 ──
+    let t = '<table class="sheet-table"><thead><tr>';
+    head.forEach((c,i) => {
+      const cls = i===0 ? 'col-date' : groupClass(c);
+      t += '<th'+(cls?(' class="'+cls+'"'):'')+'>'+esc(label(c))+'</th>';
+    });
+    t += '</tr></thead><tbody>';
+    body.forEach(r => {
+      t += '<tr>';
+      head.forEach((_,i) => {
+        const v = (r[i]||'').trim();
+        if (i===0){ t += '<th class="col-date">'+esc(v)+'</th>'; }
+        else {
+          const cls = [groupClass(head[i]), isHot(v)?'hot':''].filter(Boolean).join(' ');
+          t += '<td'+(cls?(' class="'+cls+'"'):'')+'>'+(v ? '<span class="cnt">'+esc(v)+'</span>' : '')+'</td>';
+        }
+      });
+      t += '</tr>';
+    });
+    t += '</tbody></table>';
+
+    // ── スマホ向け：日付ごとのカード（予約のある場所だけ表示） ──
+    let c = '<div class="sheet-cards">';
+    body.forEach(r => {
+      const date = esc((r[0]||'').trim());
+      const klass = esc((r[1]||'').trim());
+      let items = '';
+      for (let i=2; i<head.length; i++){
+        const v = (r[i]||'').trim();
+        if (!v) continue;
+        const icls = ['scard-item', groupClass(head[i]), isHot(v)?'hot':''].filter(Boolean).join(' ');
+        // スマホ（カード）は横幅に余裕があるため、短縮せず元の列名（フルネーム）を表示
+        items += '<li class="'+icls+'">'
+              +  '<span class="scard-loc">'+esc(head[i])+'</span>'
+              +  '<span class="scard-cnt">×'+esc(v)+'</span></li>';
+      }
+      if (!items) items = '<li class="scard-empty">登録場所なし</li>';
+      c += '<div class="scard"><div class="scard-head">'
+        +  '<span class="scard-date">'+date+'</span>'
+        +  '<span class="scard-class">'+klass+'</span></div>'
+        +  '<ul class="scard-list">'+items+'</ul></div>';
+    });
+    c += '</div>';
+
+    box.innerHTML = t + c;
+  }
+
+  fetch(url, { cache: 'no-store' })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(t => render(parseCSV(t)))
+    .catch(() => {
+      box.innerHTML = '<div class="sheet-error">予約状況を読み込めませんでした。下の「予約状況を全画面で開く」からご確認ください。</div>';
+    });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initReservationStatus);
+} else {
+  initReservationStatus();
+}
 </script>
 
 
@@ -1185,8 +1416,13 @@
         ・同じ時間帯に複数の方が予約されている場合は、現場の状況に合わせて、保護者様同士で譲り合ったり分担したりしながら進めていただければ幸いです。
       </div>
       <p class="hint">※反映まで数分かかる場合があります。</p>
-      <div class="iframe-wrap tall">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDd70tKmMUTkvLCNe-ZmiVmOD39GNkBXakZplDR04iqVk-4HmNgOTf2Opkm0Cq7b2CZr6C0cho0LOB/pubhtml?gid=441163628&amp;single=true&amp;widget=true&amp;headers=false" data-cfg-src="reservationStatusUrl" loading="lazy" title="現在の予約状況"></iframe>
+      <div class="sheet-legend">
+        <span><i class="lg-flag"></i>登校時 旗振り（a〜g）</span>
+        <span><i class="lg-patrol"></i>放課後 安全パトロール（今川・入船）</span>
+      </div>
+      <p class="sheet-rotate-hint">📱 スマホを横向きにすると、全場所を一覧できる表で表示されます。</p>
+      <div class="sheet-embed" id="reservationStatus">
+        <div class="sheet-loading">予約状況を読み込み中…</div>
       </div>
       <a class="open-link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDd70tKmMUTkvLCNe-ZmiVmOD39GNkBXakZplDR04iqVk-4HmNgOTf2Opkm0Cq7b2CZr6C0cho0LOB/pubhtml?gid=441163628" data-cfg-href="reservationStatusViewUrl" target="_blank" rel="noopener">予約状況を全画面で開く</a>
     </div>
