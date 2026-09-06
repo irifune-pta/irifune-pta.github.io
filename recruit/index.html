@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
+<title>PTA 役員募集 | 入船小学校</title>
+<link rel="icon" type="image/png" href="images/school-emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-900:#0E5C9E;
+    --blue-700:#2B8AC9;
+    --blue-500:#4FB3E8;
+    --blue-300:#A8DCF3;
+    --blue-100:#E3F4FB;
+    --green-700:#5DAA2F;
+    --green-500:#7CC242;
+    --green-100:#EEF8DE;
+    --yellow:#FFD23F;
+    --yellow-soft:#FFF6D1;
+    --coral:#FF8A65;
+    --coral-700:#C2410C;
+    --coral-100:#FFF7ED;
+    --ink:#2D3748;
+    --ink-soft:#5A6478;
+    --paper:#FFFEFB;
+    --line:#E5E9EE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans JP',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--blue-700)}
+  [hidden]{display:none !important}
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1100px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--blue-900);font-size:15px}
+  .brand-mark{width:42px;height:42px;display:grid;place-items:center;flex-shrink:0}
+  .brand-mark img{width:100%;height:100%;object-fit:contain}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  .nav-links a{
+    text-decoration:none;color:var(--ink-soft);font-weight:500;font-size:14px;
+    padding:6px 2px;border-bottom:2px solid transparent;
+  }
+  .nav-links a:hover{color:var(--blue-700);border-color:var(--yellow)}
+  .nav-links a.nav-cta{
+    background:var(--yellow);color:var(--blue-900);font-weight:700;
+    padding:8px 16px;border-radius:999px;border-bottom:0;
+  }
+  .nav-links a.nav-cta:hover{border-bottom:0;transform:translateY(-1px)}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(135deg,var(--blue-500) 0%,var(--blue-700) 55%,var(--green-500) 100%);
+    color:#fff;
+    padding:74px 24px 92px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 18% 28%,rgba(255,210,63,.30) 0,transparent 42%),
+                     radial-gradient(circle at 82% 72%,rgba(255,255,255,.18) 0,transparent 55%),
+                     radial-gradient(circle at 60% 10%,rgba(168,220,243,.35) 0,transparent 45%);
+  }
+  .hero::after{
+    content:"";position:absolute;right:-40px;top:-40px;
+    width:240px;height:240px;border-radius:50%;
+    background:rgba(255,255,255,.10);
+  }
+  .hero-inner{position:relative;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:center}
+  .hero h1{
+    font-family:'Noto Serif JP',serif;
+    font-weight:900;font-size:clamp(32px,4.8vw,52px);line-height:1.3;letter-spacing:.02em;
+    margin-bottom:18px;
+  }
+  .hero h1 .accent{color:var(--yellow);text-shadow:0 2px 0 rgba(14,92,158,.25)}
+  .hero .lead{font-size:17px;line-height:1.95;max-width:580px;color:#f6fbf3}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35);
+    padding:7px 14px;border-radius:999px;
+    font-size:13px;font-weight:500;letter-spacing:.05em;
+    margin-bottom:22px;
+  }
+  .badge .dot{width:8px;height:8px;background:var(--yellow);border-radius:50%}
+  .hero-card{
+    background:#fff;color:var(--ink);
+    border-radius:18px;padding:28px;
+    box-shadow:0 30px 60px -20px rgba(14,92,158,.45);
+    position:relative;
+  }
+  .hero-card::before{
+    content:"";position:absolute;top:-14px;left:28px;
+    width:50px;height:6px;background:var(--yellow);border-radius:3px;
+  }
+  .hero-card h3{font-size:14px;color:var(--blue-700);font-weight:700;letter-spacing:.1em;margin-bottom:14px}
+  .hero-card .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .hero-card .row:last-of-type{border-bottom:0}
+  .hero-card .row b{color:var(--blue-900);text-align:right}
+
+  /* ===== SECTION ===== */
+  section{padding:76px 24px;scroll-margin-top:80px}
+  .container{max-width:1100px;margin:0 auto}
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.2em;
+    color:var(--blue-700);background:var(--blue-100);
+    padding:6px 12px;border-radius:4px;margin-bottom:14px;
+  }
+  h2{
+    font-family:'Noto Serif JP',serif;
+    font-size:clamp(25px,3.4vw,36px);font-weight:900;color:var(--blue-900);
+    margin-bottom:14px;line-height:1.4;
+  }
+  .section-lead{color:var(--ink-soft);max-width:760px;margin-bottom:36px;font-size:15.5px}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--yellow);color:var(--blue-900);
+    padding:13px 24px;border-radius:999px;
+    font-weight:700;text-decoration:none;font-size:15px;
+    box-shadow:0 6px 0 var(--blue-700);
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn::after{content:"\2192";font-size:18px}
+  .btn.disabled{background:var(--line);color:var(--ink-soft);box-shadow:0 6px 0 #c9cfd8;pointer-events:none}
+  .btn.disabled::after{content:""}
+
+  /* ===== 応募3択 ===== */
+  .apply-section{background:linear-gradient(180deg,var(--paper) 0%,#fff 100%)}
+  .choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .choice{
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    padding:28px 24px;position:relative;
+    box-shadow:0 6px 24px -12px rgba(43,138,201,.18);
+    display:flex;flex-direction:column;
+  }
+  .choice .mark{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--blue-100);color:var(--blue-900);
+    display:grid;place-items:center;font-weight:900;font-size:18px;margin-bottom:14px;
+  }
+  .choice h3{font-size:19px;color:var(--blue-900);margin-bottom:10px;line-height:1.5}
+  .choice p{font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+  .choice.featured{
+    border:2px solid var(--yellow);
+    background:linear-gradient(180deg,var(--yellow-soft) 0%,#fff 60%);
+    box-shadow:0 14px 34px -14px rgba(255,210,63,.7);
+  }
+  .choice.featured .mark{background:var(--yellow);color:var(--blue-900)}
+  .choice .ribbon{
+    position:absolute;top:-13px;left:24px;
+    background:var(--coral);color:#fff;font-size:12px;font-weight:700;
+    padding:4px 14px;border-radius:999px;letter-spacing:.05em;
+  }
+  .choice .note{margin-top:auto;padding-top:14px;font-size:13px;color:var(--blue-700);font-weight:700}
+
+  /* ===== FAQ ===== */
+  .faq-section{background:var(--blue-100)}
+  .faq-list{display:grid;gap:14px;margin-top:8px}
+  details.faq{
+    background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  }
+  details.faq summary{
+    list-style:none;cursor:pointer;
+    padding:20px 56px 20px 24px;position:relative;
+    font-weight:700;font-size:16px;color:var(--blue-900);line-height:1.6;
+  }
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{
+    content:"\FF0B";position:absolute;right:22px;top:50%;transform:translateY(-50%);
+    color:var(--blue-700);font-weight:900;font-size:18px;
+  }
+  details.faq[open] summary::after{content:"\2212"}
+  details.faq summary:hover{background:var(--blue-100)}
+  details.faq .a{padding:0 24px 22px;color:var(--ink-soft);font-size:15px;line-height:2}
+  details.faq .a b{color:var(--ink)}
+
+  /* ===== いいこと ===== */
+  .good-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:8px}
+  .good-card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;
+    border-left:5px solid var(--green-500);
+  }
+  .good-card h3{font-size:18px;color:var(--blue-900);margin-bottom:8px;line-height:1.5}
+  .good-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.95}
+
+  /* ===== 数字 ===== */
+  .facts-section{background:var(--green-100)}
+  .facts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .fact{background:#fff;border-radius:16px;padding:28px 24px;text-align:center;border:1px solid var(--line)}
+  .fact .n{font-family:'Noto Serif JP',serif;font-size:34px;font-weight:900;color:var(--green-700);line-height:1.3}
+  .fact .l{font-size:13px;font-weight:700;color:var(--blue-900);letter-spacing:.08em;margin:6px 0 10px}
+  .fact p{font-size:13.5px;color:var(--ink-soft);line-height:1.85}
+  .honest{
+    margin-top:26px;background:#fff;border-radius:16px;padding:26px 28px;
+    border-left:5px solid var(--coral);
+  }
+  .honest h3{font-size:17px;color:var(--coral-700);margin-bottom:10px}
+  .honest p{font-size:14.5px;color:var(--ink-soft);line-height:2}
+  .honest .stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:14px}
+  .honest .stats div{font-size:13.5px;color:var(--ink)}
+  .honest .stats b{color:var(--coral-700);font-size:19px;font-family:'Noto Serif JP',serif}
+
+  /* ===== 役職 ===== */
+  .roles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:8px}
+  .role{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;
+    box-shadow:0 6px 24px -14px rgba(43,138,201,.2);
+  }
+  .role .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
+  .role h3{font-size:19px;color:var(--blue-900)}
+  .role .cnt{
+    font-size:13px;font-weight:700;color:#fff;background:var(--blue-700);
+    padding:3px 12px;border-radius:999px;white-space:nowrap;
+  }
+  .role p{font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+  .role .tag{
+    display:inline-block;margin-top:12px;font-size:13px;font-weight:700;
+    color:var(--green-700);background:var(--green-100);padding:4px 12px;border-radius:6px;
+  }
+  .role.wide{grid-column:1 / -1}
+  .role.sub{background:var(--paper)}
+  .role.sub .cnt{background:var(--ink-soft)}
+  .group-label{
+    font-weight:900;color:var(--blue-900);font-size:17px;
+    margin:34px 0 14px;padding-left:12px;border-left:5px solid var(--yellow);
+  }
+  .rule-note{
+    margin-top:22px;font-size:13.5px;color:var(--ink-soft);
+    background:var(--blue-100);border-radius:10px;padding:16px 20px;line-height:1.9;
+  }
+
+  /* ===== 声 ===== */
+  .voices-section{background:var(--yellow-soft)}
+  .voice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .voice{background:#fff;border-radius:16px;padding:26px 28px;position:relative;border:1px solid var(--line)}
+  .voice::before{
+    content:"\201C";position:absolute;top:6px;left:18px;
+    font-family:'Noto Serif JP',serif;font-size:56px;color:var(--yellow);line-height:1;
+  }
+  .voice p{font-size:15px;line-height:2;color:var(--ink);padding-left:26px}
+  .voice .who{margin-top:14px;font-size:13px;color:var(--ink-soft);text-align:right}
+
+  /* ===== 応募 ===== */
+  .form-section{background:linear-gradient(135deg,var(--blue-700) 0%,var(--blue-900) 100%);color:#fff}
+  .form-section h2{color:#fff}
+  .form-section .section-lead{color:#dbeefb}
+  .form-card{
+    background:#fff;color:var(--ink);border-radius:20px;padding:36px;
+    display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;
+  }
+  .form-card h3{font-size:20px;color:var(--blue-900);margin-bottom:10px}
+  .form-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+  .deadline-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--coral-100);color:var(--coral-700);
+    border:1px solid var(--coral);
+    padding:8px 16px;border-radius:999px;font-size:14px;font-weight:700;margin-bottom:14px;
+  }
+  .qr-box{text-align:center}
+  .qr-box img{width:170px;height:170px;object-fit:contain;border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff}
+  .qr-box .cap{font-size:12px;color:var(--ink-soft);margin-top:8px}
+  .mail-line{margin-top:18px;font-size:14px;color:var(--ink-soft)}
+  .mail-line a{font-weight:700}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--blue-100);color:var(--ink-soft);
+    padding:40px 24px;text-align:center;font-size:13px;
+    border-top:4px solid var(--yellow);
+  }
+  footer .brand{justify-content:center;color:var(--blue-900);margin-bottom:10px}
+  footer .brand-mark{width:38px;height:38px}
+  footer .links{margin-top:12px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:880px){
+    .hero{padding:56px 22px 66px}
+    .hero-inner{grid-template-columns:1fr;gap:34px}
+    .hero-card{order:2}
+    section{padding:60px 22px}
+    .choice-grid{grid-template-columns:1fr}
+    .good-grid{grid-template-columns:1fr}
+    .facts-grid{grid-template-columns:1fr}
+    .roles-grid{grid-template-columns:1fr}
+    .voice-grid{grid-template-columns:1fr}
+    .form-card{grid-template-columns:1fr;padding:28px;text-align:center}
+    .deadline-pill{margin-left:auto;margin-right:auto}
+    .qr-box{order:2}
+  }
+  @media (max-width:520px){
+    .nav-links{gap:12px}
+    .nav-links a{font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="brand-mark"><img src="images/school-emblem.png" alt="入船小学校 校章"></span>
+      <span>入船小学校 PTA 役員募集</span>
+    </div>
+    <div class="nav-links">
+      <a href="#apply">応募のしかた</a>
+      <a href="#faq">よくある不安</a>
+      <a href="#roles">どんな役があるの</a>
+      <a href="#form" class="nav-cta">応募する</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge"><span class="dot"></span><span data-cfg-text="issueDate">令和8年9月</span>　浦安市立入船小学校PTA</span>
+      <h1>くじ引き・わりあて<br><span class="accent">いっさいナシ。</span><br>のぞいてみませんか。</h1>
+      <p class="lead">
+        <span data-cfg-text="targetYear">令和9年度</span>、いっしょに活動してくれる方をさがしています。
+        あてられる・えらばれる、はありません。ぜんぶ手挙げ制です。
+        指名される心配はゼロなので、どうぞ気楽に読んでみてください。
+      </p>
+      <p class="lead" style="margin-top:14px">
+        このページは「お願い」ではなく「お誘い」のつもりで作りました。
+      </p>
+    </div>
+    <div class="hero-card">
+      <h3>まずは、ここだけ</h3>
+      <div class="row"><span>選び方</span><b>すべて手挙げ制</b></div>
+      <div class="row"><span>集まる回数</span><b><span data-cfg-text="meetingCount">年4回</span></b></div>
+      <div class="row"><span>任期</span><b>1年（毎年選べます）</b></div>
+      <div class="row"><span>受付期間</span><b><span data-cfg-text="applyPeriod">9月18日(金) 〜 9月25日(金)</span></b></div>
+      <a class="btn" style="margin-top:20px" href="#apply">まず読んでみる</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 応募の3択 ===== -->
+<section id="apply" class="apply-section">
+  <div class="container">
+    <span class="eyebrow">FIRST STEP</span>
+    <h2>いきなり決めなくて、大丈夫です</h2>
+    <p class="section-lead">
+      応募は3つから選ぶだけです。いちばん多いのは、まん中の「話を聞いてから決めたい」です。
+      聞いたうえでお断りいただいて、まったく問題ありません。
+    </p>
+    <div class="choice-grid">
+      <div class="choice">
+        <div class="mark">1</div>
+        <h3>やってみます</h3>
+        <p>希望の役があれば、あわせて教えてください。特に決まっていなくても大丈夫です。</p>
+        <div class="note">→ 内容の相談から始めます</div>
+      </div>
+      <div class="choice featured">
+        <span class="ribbon">いちばん多い選択</span>
+        <div class="mark">2</div>
+        <h3>話を聞いてから決めたい</h3>
+        <p>オンラインか学校で、<span data-cfg-text="briefingLength">15分ほど</span>ご説明します。聞いたうえでお断りいただいて構いません。しつこく誘うことはしません。</p>
+        <div class="note">→ まずはここからどうぞ</div>
+      </div>
+      <div class="choice">
+        <div class="mark">3</div>
+        <h3>単発の手伝いならできそう</h3>
+        <p>行事の当日だけ、読み聞かせだけ、といった関わり方も大歓迎です。</p>
+        <div class="note">→ できる日だけで結構です</div>
+      </div>
+    </div>
+    <p style="margin-top:26px;font-size:15px;color:var(--ink-soft)">
+      お友だちと2人1組での応募も歓迎します。「ひとりだと不安」という方は、ぜひ誘い合わせてお申し込みください。
+    </p>
+    <a class="btn" style="margin-top:18px" href="#form">応募フォームへ</a>
+  </div>
+</section>
+
+<!-- ===== 不安に先に答える ===== -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>その心配、先にお答えします</h2>
+    <p class="section-lead">
+      「PTA」と聞いて身構えてしまう気持ち、よく分かります。よくある不安から、正直にお答えします。
+    </p>
+    <div class="faq-list">
+
+      <details class="faq" open>
+        <summary>一度やったら、もう抜けられないんでしょ…？</summary>
+        <div class="a">
+          <b>任期は1年です。</b>継続は原則3年までで、続けるかどうかは毎年選べます。
+          ただ正直に言うと、いま人手が足りず3年続けている人が多いのが現状です。
+          だからこそ、力を貸していただけると本当に助かります。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>仕事をしているんだけど、できるのかな</summary>
+        <div class="a">
+          全体で集まるのは<b><span data-cfg-text="meetingCount">年4回</span></b>です。運営委員会が<span data-cfg-text="meetingMonths">6月・9月・12月・2月</span>に開かれます。<!--
+          --><span data-cfg-optional="meetingTime">開催は<span data-cfg-text="meetingTime"></span>です。</span><!--
+          --><span data-cfg-optional="meetingOnline">オンライン参加も<span data-cfg-text="meetingOnline"></span>。</span>
+          書記や会計は在宅で進められる作業が多めです。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>ひとりで全部やるなんて無理…</summary>
+        <div class="a">
+          <b>ひとりで背負う役はありません。</b>副会長は4名以上、書記は2名、会計は2名と、複数人で担当します。
+          前年の担当や他の役員がついているので、ひとりで抱えこむことにはなりません。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>知り合いがいないから、ちょっと不安</summary>
+        <div class="a">
+          みんな同じスタートです。お友だちと2人1組での応募も大歓迎。
+          「ひとりだと不安」という方は、誘い合わせてどうぞ。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>話を聞いたら、断りにくくなりそう</summary>
+        <div class="a">
+          <b>聞くだけで大丈夫です。</b>説明を聞いたうえでお断りいただいて、まったく問題ありません。
+          しつこく誘うことはしません。実際、「話を聞いてから決めたい」がいちばん多い選択です。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>正直、大変って聞くけど本当のところは？</summary>
+        <div class="a">
+          忙しい時期は、あります。ごまかしません。
+          ただ、負担を減らす見直しも毎年続けています。<span data-cfg-optional="reducedWorkload"><br><span data-cfg-text="reducedWorkload"></span></span>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== やってみると ===== -->
+<section id="good">
+  <div class="container">
+    <span class="eyebrow">GOOD THINGS</span>
+    <h2>やってみると、こんないいことがあります</h2>
+    <p class="section-lead">
+      きれいごと抜きで、実際にやっている人が「これはよかった」と言うものだけを並べました。
+    </p>
+    <div class="good-grid">
+      <div class="good-card">
+        <h3>学校の「いま」が、見えるようになります</h3>
+        <p>打ち合わせや行事の準備で、平日の学校に入ります。担任の先生以外とも顔見知りになり、学校の様子が自然と入ってくる。保護者会だけでは見えないことが、たくさんあります。</p>
+      </div>
+      <div class="good-card">
+        <h3>子どもが喜ぶ瞬間に、いちばん近くで立ち会えます</h3>
+        <p>読み聞かせ、芸術鑑賞会、ほたる観賞会。準備は正直じみた作業ですが、当日の子どもたちの反応を目の前で見られるのは、役員だけの特権です。</p>
+      </div>
+      <div class="good-card">
+        <h3>学年を越えて、保護者の知り合いができます</h3>
+        <p>同じクラスの中だけでは、なかなか広がりません。上の学年の保護者から進学や習い事の話が聞けるのは、実際とても助かります。相談できる相手が増えます。</p>
+      </div>
+      <div class="good-card">
+        <h3>できるのは、在学中の6年間だけです</h3>
+        <p>卒業してしまうと、二度と関われません。経験者から「やっておけばよかった」という声をよく聞くのは、たぶんこれが理由です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 数字 ===== -->
+<section id="facts" class="facts-section">
+  <div class="container">
+    <span class="eyebrow">NUMBERS</span>
+    <h2>数字で、ざっくりこんな感じです</h2>
+    <p class="section-lead">
+      いちばん多い不安は「どれくらい時間を取られるか分からない」です。実績の数字でお答えします。
+    </p>
+    <div class="facts-grid">
+      <div class="fact">
+        <div class="n" data-cfg-text="meetingCount">年4回</div>
+        <div class="l">集まる回数</div>
+        <p>運営委員会は<span data-cfg-text="meetingMonths">6月・9月・12月・2月</span>に開かれます。<span data-cfg-optional="meetingTime"><span data-cfg-text="meetingTime"></span>です。</span></p>
+      </div>
+      <div class="fact">
+        <div class="n">1年</div>
+        <div class="l">任期</div>
+        <p>1年で交代です。続けたい方だけが続けます。継続は原則3年までです。</p>
+      </div>
+      <div class="fact">
+        <div class="n">複数人</div>
+        <div class="l">担当のしかた</div>
+        <p>副会長は4名以上、書記は2名、会計は2名。分からないことは、まわりが教えてくれます。</p>
+      </div>
+    </div>
+
+    <div class="honest">
+      <h3>正直に、いまの状況もお伝えします</h3>
+      <p>
+        本部役員は会則で定めた人数に対して、実際に動いているのは7名です。
+        継続は原則3年までというルールがあるため、来年度も続けられるのは2名のみ。
+        昨年度の新規応募は1名で、不足分は現職の残留で埋めました。
+        「人が足りているのに念のため募集している」という状況ではない、ということだけはお伝えしておきます。
+      </p>
+      <div class="stats">
+        <div>会則の定数　<b>12</b> 名</div>
+        <div>実際の人数　<b>7</b> 名</div>
+        <div>来年度も継続できる人　<b>2</b> 名</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 役職 ===== -->
+<section id="roles">
+  <div class="container">
+    <span class="eyebrow">ROLES</span>
+    <h2>どんな役があるの？</h2>
+    <p class="section-lead">
+      「できる時に、できる人が、無理なく楽しく」。それぞれの得意なことを持ち寄っています。
+      希望の役がなくても構いません。話しながらいっしょに決めます。
+    </p>
+
+    <div class="group-label">本部役員</div>
+    <div class="roles-grid">
+      <div class="role">
+        <div class="top"><h3>副会長</h3><span class="cnt">4名以上</span></div>
+        <p>担当分野を分けて受け持ちます（安全・学年活動・広報・ICT など）。得意分野で選べます。</p>
+        <span class="tag">いちばん入りやすい役です</span>
+      </div>
+      <div class="role">
+        <div class="top"><h3>書記</h3><span class="cnt">2名</span></div>
+        <p>会議の記録と資料づくり。パソコンでの作業が中心で、在宅で進められる部分が多い役です。</p>
+        <span class="tag">在宅で進めたい方に</span>
+      </div>
+      <div class="role">
+        <div class="top"><h3>会計</h3><span class="cnt">2名</span></div>
+        <p>会費の管理と、予算・決算の作成。2名で確認し合いながら進めます。</p>
+        <span class="tag">数字を扱うのが苦にならない方に</span>
+      </div>
+      <div class="role">
+        <div class="top"><h3>会長</h3><span class="cnt">1名</span></div>
+        <p>PTA全体のまとめ役。学校や地域との窓口になります。人前で話す機会が多めです。</p>
+        <span class="tag">対外的な調整が得意な方に</span>
+      </div>
+      <div class="role sub wide">
+        <div class="top"><h3>会計監査</h3><span class="cnt">3名（うち教職員1名）</span></div>
+        <p>会計の内容を確認する役で、集まる回数がいちばん少ない役です。会則により、<b>本部役員を経験された方の中から選考</b>します。</p>
+      </div>
+    </div>
+
+    <div class="group-label">対外活動委員</div>
+    <div class="roles-grid">
+      <div class="role wide">
+        <div class="top"><h3>社会福祉協議会推進委員</h3><span class="cnt">1名／任期2年</span></div>
+        <p>地域の福祉活動に、入船小の保護者代表として関わります。学校の外で地域の方と知り合える役です。</p>
+        <span class="tag">学校の外にも輪を広げたい方に</span>
+      </div>
+    </div>
+
+    <div class="rule-note">
+      今回募集するのは、<b>本部役員（会長・副会長・書記・会計）と会計監査、そして社会福祉協議会推進委員</b>です。<br>
+      学年活動部・安全指導部・広報部・文化部のクラス委員は、新年度4月に各クラスで選出します。今回の募集には含まれません。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 経験者の声 ===== -->
+<section id="voices" class="voices-section" hidden>
+  <div class="container">
+    <span class="eyebrow">VOICES</span>
+    <h2>やってみた人の話</h2>
+    <p class="section-lead">
+      よかったことも、大変だったことも、そのまま載せています。
+    </p>
+    <div class="voice-grid">
+      <div class="voice" data-cfg-optional="voice1Text">
+        <p data-cfg-text="voice1Text"></p>
+        <div class="who" data-cfg-text="voice1Who"></div>
+      </div>
+      <div class="voice" data-cfg-optional="voice2Text">
+        <p data-cfg-text="voice2Text"></p>
+        <div class="who" data-cfg-text="voice2Who"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 応募 ===== -->
+<section id="form" class="form-section">
+  <div class="container">
+    <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff">APPLY</span>
+    <h2>応募する・話を聞く</h2>
+    <p class="section-lead">
+      フォームから、3つのうち当てはまるものを選んでお知らせください。1分ほどで終わります。
+    </p>
+    <div class="form-card">
+      <div>
+        <span class="deadline-pill">受付期間　<span data-cfg-text="applyPeriod">9月18日(金) 〜 9月25日(金)</span></span>
+        <h3>応募フォーム</h3>
+        <p>
+          「やってみます」「話を聞いてから決めたい」「単発の手伝いならできそう」の3つから選ぶだけです。
+          迷ったら、まん中の「話を聞いてから決めたい」を選んでください。
+        </p>
+        <a class="btn disabled" id="formBtn" style="margin-top:18px" data-cfg-href="formUrl" href="#">フォームは準備中です</a>
+        <div class="mail-line">
+          フォームが使えない場合は、メールでも受け付けます
+          <a href="mailto:irifunepta@gmail.com"><span data-cfg-text="contactMail">irifunepta@gmail.com</span></a>
+          <span id="contactPerson" hidden><br><span data-cfg-text="contactPerson"></span></span>
+        </div>
+      </div>
+      <div class="qr-box" id="qrBox" hidden>
+        <img data-cfg-src="qrImageUrl" src="" alt="応募フォームのQRコード">
+        <div class="cap">スマートフォンで読み取れます</div>
+      </div>
+    </div>
+    <p style="margin-top:26px;color:#dbeefb;font-size:15px;line-height:2">
+      PTAは、子どもたちの応援団です。お待ちしています。
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">
+    <span class="brand-mark"><img src="images/school-emblem.png" alt="入船小学校 校章"></span>
+    <span>浦安市立入船小学校 PTA本部</span>
+  </div>
+  <div><span data-cfg-text="targetYear">令和9年度</span> 本部役員・社会福祉協議会推進委員 募集</div>
+  <div class="links">
+    <a data-cfg-href="safetySiteUrl" href="https://irifune-pta.github.io/">PTA安全活動サイト</a>
+    <a id="videoLink" data-cfg-href="videoUrl" href="#" hidden>PTA紹介動画</a>
+    <a href="mailto:irifunepta@gmail.com">お問い合わせ</a>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:var(--ink-soft)">
+    ご不明な点は PTA本部（<span data-cfg-text="contactMail">irifunepta@gmail.com</span>）までお知らせください。
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+/* config.js の値をページに流し込む（安全活動サイトと同じ仕組み） */
+(function(){
+  /* 未記入の判定：空欄、または【 】が残っているものは「まだ決まっていない」とみなす */
+  function filled(v){
+    return typeof v === 'string' && v.trim() !== '' && !/[【】]/.test(v);
+  }
+
+  function apply(){
+    const cfg = window.CONFIG || {};
+
+    /* まだ決まっていない項目は、その部分ごと非表示にする */
+    document.querySelectorAll('[data-cfg-optional]').forEach(el => {
+      if (!filled(cfg[el.dataset.cfgOptional])) el.hidden = true;
+    });
+
+    document.querySelectorAll('[data-cfg-text]').forEach(el => {
+      const k = el.dataset.cfgText; if (filled(cfg[k])) el.textContent = cfg[k];
+    });
+    document.querySelectorAll('[data-cfg-href]').forEach(el => {
+      const k = el.dataset.cfgHref; if (filled(cfg[k])) el.setAttribute('href', cfg[k]);
+    });
+    document.querySelectorAll('[data-cfg-src]').forEach(el => {
+      const k = el.dataset.cfgSrc; if (filled(cfg[k])) el.setAttribute('src', cfg[k]);
+    });
+
+    /* 応募フォームのURLが入っていればボタンを有効にする */
+    const btn = document.getElementById('formBtn');
+    if (btn && filled(cfg.formUrl)){
+      btn.classList.remove('disabled');
+      btn.textContent = '応募フォームを開く';
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener');
+    }
+
+    /* 経験者の声は、1件でも入っていればセクションごと表示する */
+    const vs = document.getElementById('voices');
+    if (vs && (filled(cfg.voice1Text) || filled(cfg.voice2Text))) vs.hidden = false;
+
+    /* QRコード画像が指定されていれば表示する */
+    const qr = document.getElementById('qrBox');
+    if (qr && filled(cfg.qrImageUrl)) qr.hidden = false;
+
+    /* 担当者の記載があれば表示する */
+    const cp = document.getElementById('contactPerson');
+    if (cp && filled(cfg.contactPerson)) cp.hidden = false;
+
+    /* 紹介動画のリンクがあれば表示する */
+    const vl = document.getElementById('videoLink');
+    if (vl && filled(cfg.videoUrl)){ vl.hidden = false; vl.setAttribute('target','_blank'); vl.setAttribute('rel','noopener'); }
+
+    /* メールアドレスの差し替えに追従する */
+    if (filled(cfg.contactMail)){
+      document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+        a.setAttribute('href', 'mailto:' + cfg.contactMail);
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+})();
+</script>
+
+</body>
+</html>
