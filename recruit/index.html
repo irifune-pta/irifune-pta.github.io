@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="bingbot" content="noindex, nofollow">
-<title>PTA本部 メンバー募集 | 入船小学校</title>
+<title>PTA本部 意向調査｜浦安市立入船小学校</title>
 <link rel="icon" type="image/png" href="images/school-emblem.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -261,6 +261,7 @@
 
   /* ===== 声 ===== */
   .voices-section{background:var(--yellow-soft)}
+  .good-section{background:var(--yellow-soft)}
   .voice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   .voice{background:#fff;border-radius:16px;padding:26px 28px;position:relative;border:1px solid var(--line)}
   .voice::before{
@@ -321,6 +322,63 @@
     .nav-links{gap:12px}
     .nav-links a{font-size:13px}
   }
+
+  /* ===== 仕事の中身 ===== */
+  .work-hero{
+    background:var(--blue-100);border-radius:18px;padding:28px 30px;
+    margin-bottom:30px;border-left:5px solid var(--blue-700);
+  }
+  .work-hero h3{font-size:20px;color:var(--blue-900);margin-bottom:8px;line-height:1.5}
+  .work-hero p{font-size:15px;color:var(--ink-soft);line-height:1.95}
+  .lane-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .lane{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .lane h3{font-size:17px;color:var(--blue-900);margin-bottom:14px;line-height:1.5}
+  .lane ul{list-style:none;display:grid;gap:10px}
+  .lane li{font-size:14.5px;color:var(--ink);line-height:1.8;padding-left:20px;position:relative}
+  .lane li::before{content:"\25CF";position:absolute;left:0;top:-1px;color:var(--blue-500);font-size:11px}
+  .lane .foot{
+    margin-top:16px;padding-top:13px;border-top:1px dashed var(--line);
+    font-size:13.5px;color:var(--ink-soft);line-height:1.85;
+  }
+  .notdo{
+    margin-top:30px;background:var(--yellow-soft);
+    border:2px solid var(--yellow);border-radius:18px;padding:28px 30px;
+  }
+  .notdo h3{font-size:19px;color:var(--blue-900);margin-bottom:6px;line-height:1.5}
+  .notdo .sub{font-size:14px;color:var(--ink-soft);margin-bottom:18px;line-height:1.9}
+  .notdo ul{list-style:none;display:grid;gap:15px}
+  .notdo li{font-size:15.5px;line-height:1.8;padding-left:30px;position:relative;color:var(--ink);font-weight:700}
+  .notdo li::before{content:"\2715";position:absolute;left:2px;top:1px;color:var(--coral-700);font-weight:900;font-size:16px}
+  .notdo li span{display:block;font-size:14px;color:var(--ink-soft);margin-top:3px;font-weight:400;line-height:1.9}
+  .area-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
+  .area{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .area .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .area h4{font-size:16.5px;color:var(--blue-900)}
+  .area .where{font-size:12px;font-weight:700;padding:3px 11px;border-radius:999px;white-space:nowrap}
+  .area .where.home{background:var(--green-100);color:var(--green-700)}
+  .area .where.school{background:var(--blue-100);color:var(--blue-900)}
+  .area p{font-size:14px;color:var(--ink-soft);line-height:1.85}
+  .perk{
+    margin-top:26px;background:#fff;border:1px solid var(--line);
+    border-left:5px solid var(--yellow);border-radius:14px;padding:22px 26px;
+  }
+  .perk h3{font-size:17px;color:var(--blue-900);margin-bottom:6px}
+  .perk p{font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+  .subhead{
+    font-weight:900;color:var(--blue-900);font-size:18px;
+    margin:38px 0 14px;padding-left:12px;border-left:5px solid var(--yellow);line-height:1.5;
+  }
+  .survey-note{
+    margin-top:26px;background:#fff;border:1px solid var(--line);
+    border-radius:14px;padding:20px 24px;font-size:14.5px;color:var(--ink-soft);line-height:1.95;
+  }
+  .survey-note b{color:var(--ink)}
+  @media (max-width:880px){
+    .lane-grid{grid-template-columns:1fr}
+    .area-grid{grid-template-columns:1fr}
+    .work-hero{padding:24px 22px}
+    .notdo{padding:24px 22px}
+  }
 </style>
 </head>
 <body>
@@ -329,13 +387,14 @@
   <div class="nav-inner">
     <div class="brand">
       <span class="brand-mark"><img src="images/school-emblem.png" alt="入船小学校 校章"></span>
-      <span>入船小学校 PTA メンバー募集</span>
+      <span>入船小学校 PTA本部</span>
     </div>
     <div class="nav-links">
-      <a href="#apply">応募のしかた</a>
-      <a href="#faq">よくある不安</a>
-      <a href="#roles">どんな役があるの</a>
-      <a href="#form" class="nav-cta">応募する</a>
+      <a href="#situation">いまの状況</a>
+      <a href="#survey">意向調査</a>
+      <a href="#work">何をしているか</a>
+      <a href="#roles">役職</a>
+      <a href="#form" class="nav-cta">回答する</a>
     </div>
   </div>
 </nav>
@@ -344,236 +403,280 @@
   <div class="hero-inner">
     <div>
       <span class="badge"><span class="dot"></span><span data-cfg-text="issueDate">令和8年9月</span>　浦安市立入船小学校PTA</span>
-      <h1>くじ引き・わりあて<br><span class="accent">いっさいナシ。</span><br>のぞいてみませんか。</h1>
+      <h1>12人でやる仕事を、<br><span class="accent">いま7人で</span><br>まわしています。</h1>
       <p class="lead">
-        <span data-cfg-text="targetYear">令和9年度</span>、いっしょに活動してくれる方をさがしています。
-        あてられる・えらばれる、はありません。ぜんぶ手挙げ制です。
-        指名される心配はゼロなので、どうぞ気楽に読んでみてください。
+        きれいな言葉から始めるのはやめます。<span data-cfg-text="targetYear">令和9年度</span>のPTA本部は、このままだと人が足りません。
+        昨年度の新規応募は1名でした。
       </p>
       <p class="lead" style="margin-top:14px">
-        このページは「お願い」ではなく「お誘い」のつもりで作りました。
+        ただ、いきなり「引き受けてください」とは言いません。
+        まずお願いしたいのは、<b>3つから選ぶだけの意向調査</b>です。1分で終わります。
+      </p>
+      <p class="lead" style="margin-top:14px">
+        くじ引き・わりあては、いっさいありません。ぜんぶ手挙げ制です。
+        <b>「今回は難しい」と答えていただいて、まったく問題ありません。</b>
       </p>
     </div>
     <div class="hero-card">
       <h3>まずは、ここだけ</h3>
+      <div class="row"><span>お願いすること</span><b>3択に答えるだけ</b></div>
+      <div class="row"><span>かかる時間</span><b>1分ほど</b></div>
       <div class="row"><span>選び方</span><b>すべて手挙げ制</b></div>
-      <div class="row"><span>集まる回数</span><b><span data-cfg-text="meetingCount">年4回</span></b></div>
-      <div class="row"><span>任期</span><b>1年（毎年選べます）</b></div>
-      <div class="row"><span>受付期間</span><b><span data-cfg-text="applyPeriod">9月18日(金) 〜 9月25日(金)</span></b></div>
-      <a class="btn" style="margin-top:20px" href="#apply">まず読んでみる</a>
+      <div class="row" data-cfg-optional="surveyPeriod"><span>回答期間</span><b><span data-cfg-text="surveyPeriod"></span></b></div>
+      <a class="btn" style="margin-top:20px" href="#situation">状況を読んでみる</a>
     </div>
   </div>
 </header>
 
-<!-- ===== 応募の3択 ===== -->
-<section id="apply" class="apply-section">
+<!-- ===== 1. いまの状況 ===== -->
+<section id="situation" class="facts-section">
   <div class="container">
-    <span class="eyebrow">FIRST STEP</span>
-    <h2>いきなり決めなくて、大丈夫です</h2>
+    <span class="eyebrow">いま起きていること</span>
+    <h2>お願いをする前に、正直に状況をお伝えします</h2>
     <p class="section-lead">
-      応募は3つから選ぶだけです。いちばん多いのは、まん中の「話を聞いてから決めたい」です。
-      聞いたうえでお断りいただいて、まったく問題ありません。
-    </p>
-    <div class="choice-grid">
-      <div class="choice">
-        <div class="mark">1</div>
-        <h3>やってみます</h3>
-        <p>希望の役があれば、あわせて教えてください。特に決まっていなくても大丈夫です。</p>
-        <div class="note">→ 内容の相談から始めます</div>
-      </div>
-      <div class="choice featured">
-        <span class="ribbon">いちばん多い選択</span>
-        <div class="mark">2</div>
-        <h3>話を聞いてから決めたい</h3>
-        <p>オンラインか学校で、<span data-cfg-text="briefingLength">15分ほど</span>ご説明します。聞いたうえでお断りいただいて構いません。しつこく誘うことはしません。</p>
-        <div class="note">→ まずはここからどうぞ</div>
-      </div>
-      <div class="choice">
-        <div class="mark">3</div>
-        <h3>単発の手伝いならできそう</h3>
-        <p>行事の当日だけ、読み聞かせだけ、といった関わり方も大歓迎です。</p>
-        <div class="note">→ できる日だけで結構です</div>
-      </div>
-    </div>
-    <p style="margin-top:26px;font-size:15px;color:var(--ink-soft)">
-      お友だちと2人1組での応募も歓迎します。「ひとりだと不安」という方は、ぜひ誘い合わせてお申し込みください。
-    </p>
-    <a class="btn" style="margin-top:18px" href="#form">応募フォームへ</a>
-  </div>
-</section>
-
-<!-- ===== 不安に先に答える ===== -->
-<section id="faq" class="faq-section">
-  <div class="container">
-    <span class="eyebrow">FAQ</span>
-    <h2>その心配、先にお答えします</h2>
-    <p class="section-lead">
-      「PTA」と聞いて身構えてしまう気持ち、よく分かります。よくある不安から、正直にお答えします。
-    </p>
-    <div class="faq-list">
-
-      <details class="faq" open>
-        <summary>一度やったら、もう抜けられないんでしょ…？</summary>
-        <div class="a">
-          <b>任期は1年です。</b>継続は原則3年までで、続けるかどうかは毎年選べます。
-          ただ正直に言うと、いま人手が足りず3年続けている人が多いのが現状です。
-          だからこそ、力を貸していただけると本当に助かります。
-        </div>
-      </details>
-
-      <details class="faq">
-        <summary>仕事をしているんだけど、できるのかな</summary>
-        <div class="a">
-          全体で集まるのは<b><span data-cfg-text="meetingCount">年4回</span></b>です。運営委員会が<span data-cfg-text="meetingMonths">6月・9月・12月・2月</span>に開かれます。<!--
-          --><span data-cfg-optional="meetingTime">開催は<span data-cfg-text="meetingTime"></span>です。</span><!--
-          --><span data-cfg-optional="meetingOnline">オンライン参加も<span data-cfg-text="meetingOnline"></span>。</span>
-          書記や会計は在宅で進められる作業が多めです。
-        </div>
-      </details>
-
-      <details class="faq">
-        <summary>ひとりで全部やるなんて無理…</summary>
-        <div class="a">
-          <b>ひとりで背負う役はありません。</b>副会長は4名以上、書記は2名、会計は2名と、複数人で担当します。
-          前年の担当や他のメンバーがついているので、ひとりで抱えこむことにはなりません。
-        </div>
-      </details>
-
-      <details class="faq">
-        <summary>知り合いがいないから、ちょっと不安</summary>
-        <div class="a">
-          みんな同じスタートです。お友だちと2人1組での応募も大歓迎。
-          「ひとりだと不安」という方は、誘い合わせてどうぞ。
-        </div>
-      </details>
-
-      <details class="faq">
-        <summary>話を聞いたら、断りにくくなりそう</summary>
-        <div class="a">
-          <b>聞くだけで大丈夫です。</b>説明を聞いたうえでお断りいただいて、まったく問題ありません。
-          しつこく誘うことはしません。実際、「話を聞いてから決めたい」がいちばん多い選択です。
-        </div>
-      </details>
-
-      <details class="faq">
-        <summary>正直、大変って聞くけど本当のところは？</summary>
-        <div class="a">
-          忙しい時期は、あります。ごまかしません。
-          ただ、負担を減らす見直しも毎年続けています。<span data-cfg-optional="reducedWorkload"><br><span data-cfg-text="reducedWorkload"></span></span>
-        </div>
-      </details>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== やってみると ===== -->
-<section id="good">
-  <div class="container">
-    <span class="eyebrow">GOOD THINGS</span>
-    <h2>やってみると、こんないいことがあります</h2>
-    <p class="section-lead">
-      きれいごと抜きで、実際にやっている人が「これはよかった」と言うものだけを並べました。
-    </p>
-    <div class="good-grid">
-      <div class="good-card">
-        <h3>学校の「いま」が、見えるようになります</h3>
-        <p>打ち合わせや行事の準備で、平日の学校に入ります。担任の先生以外とも顔見知りになり、学校の様子が自然と入ってくる。保護者会だけでは見えないことが、たくさんあります。</p>
-      </div>
-      <div class="good-card">
-        <h3>子どもが喜ぶ瞬間に、いちばん近くで立ち会えます</h3>
-        <p>読み聞かせ、芸術鑑賞会、ほたる観賞会。準備は正直じみた作業ですが、当日の子どもたちの反応を目の前で見られるのは、引き受けた人だけの特権です。</p>
-      </div>
-      <div class="good-card">
-        <h3>学年を越えて、保護者の知り合いができます</h3>
-        <p>同じクラスの中だけでは、なかなか広がりません。上の学年の保護者から進学や習い事の話が聞けるのは、実際とても助かります。相談できる相手が増えます。</p>
-      </div>
-      <div class="good-card">
-        <h3>できるのは、在学中の6年間だけです</h3>
-        <p>卒業してしまうと、二度と関われません。経験者から「やっておけばよかった」という声をよく聞くのは、たぶんこれが理由です。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 数字 ===== -->
-<section id="facts" class="facts-section">
-  <div class="container">
-    <span class="eyebrow">NUMBERS</span>
-    <h2>数字で、ざっくりこんな感じです</h2>
-    <p class="section-lead">
-      いちばん多い不安は「どれくらい時間を取られるか分からない」です。実績の数字でお答えします。
+      応募がほとんど集まらない状態が続いています。かっこ悪いので詳しく書いてきませんでしたが、
+      伏せたままでは何も変わらないので、数字のまま出します。
     </p>
     <div class="facts-grid">
       <div class="fact">
-        <div class="n" data-cfg-text="meetingCount">年4回</div>
-        <div class="l">集まる回数</div>
-        <p>運営委員会は<span data-cfg-text="meetingMonths">6月・9月・12月・2月</span>に開かれます。<span data-cfg-optional="meetingTime"><span data-cfg-text="meetingTime"></span>です。</span></p>
+        <div class="n">12<span style="font-size:18px">名</span></div>
+        <div class="l">会則で定めた人数</div>
+        <p>会長・副会長・書記・会計・会計監査・社会福祉協議会推進委員を合わせた定数です。</p>
       </div>
       <div class="fact">
-        <div class="n">1年</div>
-        <div class="l">任期</div>
-        <p>1年で交代です。続けたい方だけが続けます。継続は原則3年までです。</p>
+        <div class="n">7<span style="font-size:18px">名</span></div>
+        <div class="l">実際に動いている人数</div>
+        <p>足りない分は、いまいるメンバーが兼任して埋めています。会長が副会長の仕事も持っている状態です。</p>
       </div>
       <div class="fact">
-        <div class="n">複数人</div>
-        <div class="l">担当のしかた</div>
-        <p>副会長は4名以上、書記は2名、会計は2名。分からないことは、まわりが教えてくれます。</p>
+        <div class="n">1<span style="font-size:18px">名</span></div>
+        <div class="l">昨年度の新規応募</div>
+        <p>不足分は、本来なら交代するはずだった人が残ることで埋めました。</p>
       </div>
     </div>
 
     <div class="honest">
-      <h3>正直に、いまの状況もお伝えします</h3>
+      <h3>このままだと、来年度どうなるか</h3>
       <p>
-        PTA本部は会則で定めた人数に対して、実際に動いているのは7名です。
-        継続は原則3年までというルールがあるため、来年度も続けられるのは2名のみ。
-        昨年度の新規応募は1名で、不足分は現職の残留で埋めました。
-        「人が足りているのに念のため募集している」という状況ではない、ということだけはお伝えしておきます。
+        任期は1年で、続けるのは原則3年までと決めています。
+        <b>この原則どおりだと、来年度も続けられるのは2名だけ</b>です。
+        いま3年目の人が多く、このままでは「原則を破って4年目に入ってもらう」ことを
+        お願いしなければならない状況です。
+      </p>
+      <p style="margin-top:12px">
+        「人は足りているけれど、念のため募集している」ではない、ということだけはお伝えしておきます。
       </p>
       <div class="stats">
         <div>会則の定数　<b>12</b> 名</div>
         <div>実際の人数　<b>7</b> 名</div>
         <div>来年度も継続できる人　<b>2</b> 名</div>
+        <div>昨年度の新規応募　<b>1</b> 名</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ===== 2. 意向調査 ===== -->
+<section id="survey" class="apply-section">
+  <div class="container">
+    <span class="eyebrow">FIRST STEP</span>
+    <h2>まず、意向調査にお答えください</h2>
+    <p class="section-lead">
+      これは応募のお願いではありません。「いま、どう思っているか」を教えていただくものです。
+      3つから選ぶだけ、1分で終わります。全世帯にお願いしています。
+    </p>
+    <div class="choice-grid">
+      <div class="choice">
+        <div class="mark">1</div>
+        <h3>やってもいい</h3>
+        <p>引き受けてもいい、と思っていただける方。役や担当は、これから相談して決めます。いま希望が決まっていなくて大丈夫です。</p>
+        <div class="note">→ あとで内容の相談をします</div>
+      </div>
+      <div class="choice featured">
+        <span class="ribbon">迷ったらこちら</span>
+        <div class="mark">2</div>
+        <h3>話を聞いてから決めたい</h3>
+        <p>内容を聞いてから判断したい方。オンラインか学校で<span data-cfg-text="briefingLength">15分ほど</span>ご説明します。聞いたうえでお断りいただいて、まったく問題ありません。しつこく誘うことはしません。</p>
+        <div class="note">→ いちばん気楽な選択肢です</div>
+      </div>
+      <div class="choice">
+        <div class="mark">3</div>
+        <h3>今回は難しい</h3>
+        <p>それで構いません。<b>「難しい」も立派な回答です。</b>どれくらいの方がそう考えているのかが分かること自体が、私たちには必要な情報になります。理由の記入は任意です。</p>
+        <div class="note">→ 選んでいただくだけで助かります</div>
+      </div>
+    </div>
+
+    <div class="survey-note">
+      <b>1・2を選んだ方には、「どの担当なら関われそうか」もお聞きします。</b>
+      下の「本部役員は、実際に何をしているのか」に担当の一覧があります。
+      在宅で完結するもの、学校に行くことが多いものなど、性格がかなり違います。読んでから選んでください。<br><br>
+      行事の当日だけ手伝う、という関わり方もあります。フォームで選べるようにしてあります。
+      お友だちと2人1組での参加も歓迎です。<span data-cfg-optional="surveyAnonymity"><br><span data-cfg-text="surveyAnonymity"></span></span>
+    </div>
+
+    <a class="btn" style="margin-top:22px" href="#form">意向調査フォームへ</a>
+  </div>
+</section>
+
+<!-- ===== 3. 何をしているのか ===== -->
+<section id="work">
+  <div class="container">
+    <span class="eyebrow">WHAT WE DO</span>
+    <h2>本部役員は、実際に何をしているのか</h2>
+    <p class="section-lead">
+      ここがいちばん伝わっていませんでした。「PTA本部」と聞いて思い浮かぶ姿と、実際にやっていることは、かなり違います。
+      できるだけそのまま書きます。
+    </p>
+
+    <div class="work-hero">
+      <h3>運営委員会と行事のとき以外は、基本的に在宅です</h3>
+      <p>
+        書類を回して、相談して、決める。やりとりの大半はLINEとGoogleドライブで、その多くは家からスマートフォンで片づきます。
+        「集まらないと決められない」ということは、ほとんどありません。担当による違いも、ほとんどありません。
+      </p>
+    </div>
+
+    <div class="lane-grid">
+      <div class="lane">
+        <h3>必ず集まるもの</h3>
+        <ul>
+          <li><b>運営委員会（<span data-cfg-text="meetingCount">年4回</span>）</b><br><span data-cfg-text="meetingMonths">6月・9月・12月・2月</span><span data-cfg-optional="meetingTime">／<span data-cfg-text="meetingTime"></span></span></li>
+          <li>学校との連携の場です。校長先生・教頭先生との調整も、ここで行います</li>
+        </ul>
+        <div class="foot">
+          土曜日の午前中なので、<b>平日にお休みを取っていただく必要はありません。</b>
+          全体で集まるのは、基本的にこの4回だけです。
+        </div>
+      </div>
+      <div class="lane">
+        <h3>行事のときに、現地で動くもの</h3>
+        <ul>
+          <li><b>運動会</b>　安全の腕章をつけて見回り</li>
+          <li><b>ほたる観賞会</b>　来場された方の誘導</li>
+          <li><b>地域文化祭</b>　出店（出られる人で）</li>
+        </ul>
+        <div class="foot">
+          役員のうち、<b>出られるメンバーで分担します。強制はいっさいありません。</b>
+          ただ正直に書くと、予定がなければだいたい皆さん出てきています。
+        </div>
+      </div>
+    </div>
+
+    <div class="notdo">
+      <h3>やらなくていいこと</h3>
+      <p class="sub">
+        いちばん誤解されている部分です。「安全」「文化」と書いてあると、自分が現場に立つ姿を想像してしまいますが、
+        本部役員の多くは<b>調整する役</b>で、実際に動くのはクラス委員です。
+      </p>
+      <ul>
+        <li>朝の旗振りに、自分が立つわけではありません
+          <span>実施するのはクラス委員です。本部は、その調整をします。</span></li>
+        <li>パトロールに、自分が出るわけではありません
+          <span>こちらも同じく、実施の調整をする役です。</span></li>
+        <li>読み聞かせを、自分で読むわけではありません
+          <span>読み手を募集するのもクラス委員が中心で、本部はその相談役です。</span></li>
+        <li>議事録をゼロから書き起こすわけではありません
+          <span>事前に分かることは書いておき、当日はその場で直すだけです。会長・校長先生の挨拶は原稿をいただきます。</span></li>
+      </ul>
+    </div>
+
+    <div class="lane" style="margin-top:22px">
+      <h3>学校に行くのは、こんなとき</h3>
+      <ul>
+        <li>プリントの配布や、学校との調整で立ち寄ることがあります</li>
+        <li><b>新入生セットづくり</b>　腕章やPTA入会案内などをそろえます。年度最後の運営委員会のときに、みんなで手分けしてやります</li>
+        <li><b>選考（募集）の配布資料の印刷</b></li>
+        <li>ほかに、有志で集まったり、クラス委員の集まりに顔を出したりすることもあります</li>
+      </ul>
+      <div class="foot">
+        副会長が印刷をするのは、だいたいこの2つくらいです。<b>それ以外の作業は、家からで済みます。</b>
+      </div>
+    </div>
+
+    <div class="subhead">担当の一覧（副会長は、この中から受け持ちます）</div>
+    <div class="area-grid">
+      <div class="area">
+        <div class="top"><h4>運営・企画</h4><span class="where home">ほぼ在宅</span></div>
+        <p>運営委員会の運営と、校長先生・教頭先生との調整。地域文化祭・学校キャンプ・おやじの会との連携など、行事の企画のとりまとめ。学校との調整で、学校に立ち寄ることがあります。</p>
+      </div>
+      <div class="area">
+        <div class="top"><h4>ICT</h4><span class="where home">ほぼ在宅で完結</span></div>
+        <p>Googleグループ・Googleドライブの管理、フォーム作成のサポート。来年度はホームページの管理もお願いしたいと考えています。パソコンやスマホの操作が苦にならない方に。</p>
+      </div>
+      <div class="area">
+        <div class="top"><h4>広報</h4><span class="where home">ほぼ在宅</span></div>
+        <p>広報紙「ほたるの里」を年2回（7月・3月）発行します。制作するのは広報部のクラス委員で、本部はその調整をします。</p>
+      </div>
+      <div class="area">
+        <div class="top"><h4>学年活動</h4><span class="where home">ほぼ在宅</span></div>
+        <p>各学年のクラス委員が行う学年活動の相談役です。企画そのものは、各学年で進みます。</p>
+      </div>
+      <div class="area">
+        <div class="top"><h4>安全</h4><span class="where home">ほぼ在宅</span></div>
+        <p>朝の旗振り、午後のパトロールを、クラス委員と連携して進めます。実施するのはクラス委員で、本部は調整役です。</p>
+      </div>
+      <div class="area">
+        <div class="top"><h4>文化</h4><span class="where home">ほぼ在宅</span></div>
+        <p>保護者による読み聞かせの調整と、年1回の芸術鑑賞会の演目調整。やりとりは基本的にLINEです。演目によっては集まることもあります。</p>
+      </div>
+      <div class="area">
+        <div class="top"><h4>選考</h4><span class="where home">ほぼ在宅</span></div>
+        <p>本部役員と委員の募集の運営です。このページや、いま読んでいただいている調査も、この担当が作っています。</p>
+      </div>
+    </div>
+
+    <div class="rule-note" style="margin-top:22px">
+      <b>どの担当も、進め方はほとんど同じです。</b>やりとりはLINEとGoogleドライブで、家からで済みます。<br>
+      いまは<b>5人で、この7つの担当を分け合っています。</b>1人が持つのは1〜2つで、3つ持っている人もいます。
+      本来はもっと分けられるはずのもので、<b>人が増えれば1人あたりは軽くなります。</b>
+      「副会長になったら全部やらされる」ということはありません。
+    </div>
+
+    <div class="perk">
+      <h3>ひとつ、実利の話も</h3>
+      <p>
+        運動会には<b>PTA役員専用の席</b>が用意されます。朝から場所取りをしなくても、子どもがよく見える場所で見られます。
+        きれいごとではない得として、これも正直に書いておきます。
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 役職 ===== -->
-<section id="roles">
+<section id="roles" class="faq-section">
   <div class="container">
     <span class="eyebrow">ROLES</span>
     <h2>どんな役があるの？</h2>
     <p class="section-lead">
-      「できる時に、できる人が、無理なく楽しく」。それぞれの得意なことを持ち寄っています。
-      希望の役がなくても構いません。話しながらいっしょに決めます。
+      希望の役が決まっていなくても構いません。話しながら、いっしょに決めます。
     </p>
 
     <div class="group-label">PTA本部<span class="formal">会則上の名称は「本部役員」です</span></div>
     <div class="roles-grid">
       <div class="role">
         <div class="top"><h3>副会長</h3><span class="cnt">4名以上</span></div>
-        <p>担当分野を分けて受け持ちます（安全・学年活動・広報・ICT など）。得意分野で選べます。</p>
+        <p>上の担当一覧から、1〜2つを受け持ちます。得意なこと・できそうなことで選べます。やりとりの大半はLINEとGoogleドライブです。</p>
         <span class="tag">いちばん入りやすい役です</span>
       </div>
       <div class="role">
         <div class="top"><h3>書記</h3><span class="cnt">2名</span></div>
-        <p>会議の記録と資料づくり。パソコンでの作業が中心で、在宅で進められる部分が多い役です。</p>
+        <p>運営委員会とPTA総会の文書のとりまとめ。ゼロから書き起こすのではなく、事前に分かることを書いておいて、当日その場で直します。挨拶は原稿をいただきます。</p>
         <span class="tag">在宅で進めたい方に</span>
       </div>
       <div class="role">
         <div class="top"><h3>会計</h3><span class="cnt">2名</span></div>
-        <p>会費の管理と、予算・決算の作成。2名で確認し合いながら進めます。</p>
-        <span class="tag">数字を扱うのが苦にならない方に</span>
+        <p>PTA会費の管理です。支払いは振り込みが中心。学年活動費などは運営委員会のときに受け渡し、広報紙の支払いなど個別のやりとりも発生します。<b>振込作業があるため、平日に銀行へ行ける方だと助かります。</b></p>
+        <span class="tag">平日に動ける方に</span>
       </div>
       <div class="role">
         <div class="top"><h3>会長</h3><span class="cnt">1名</span></div>
-        <p>PTA全体のまとめ役。学校や地域との窓口になります。人前で話す機会が多めです。</p>
+        <p>PTAの代表です。校長先生・教頭先生との調整のほか、市P連（浦安市PTA連絡協議会）の集まりや、市の行事に出席します。対外的に出ていく機会がある役です。</p>
         <span class="tag">対外的な調整が得意な方に</span>
       </div>
       <div class="role sub wide">
         <div class="top"><h3>会計監査</h3><span class="cnt">3名（うち教職員1名）</span></div>
-        <p>会計の内容を確認する役で、集まる回数がいちばん少ない役です。会則により、<b>PTA本部を経験された方の中から選考</b>します。</p>
+        <p><b>年度末に1回だけ</b>の役です。例年、前年度の会計担当が引き受けています。会則により、<b>PTA本部を経験された方の中から選考</b>します。</p>
       </div>
     </div>
 
@@ -587,8 +690,119 @@
     </div>
 
     <div class="rule-note">
-      今回募集するのは、<b>PTA本部（会長・副会長・書記・会計）と会計監査、そして社会福祉協議会推進委員</b>です。<br>
-      学年活動部・安全指導部・広報部・文化部のクラス委員は、新年度4月に各クラスで選出します。今回の募集には含まれません。
+      今回の意向調査でお聞きしているのは、<b>PTA本部（会長・副会長・書記・会計）と社会福祉協議会推進委員</b>についてです。<br>
+      学年活動部・安全指導部・広報部・文化部のクラス委員は、新年度4月に各クラスで選出します。今回の調査には含まれません。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 不安に先に答える ===== -->
+<section id="faq">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>その心配、先にお答えします</h2>
+    <p class="section-lead">
+      「PTA」と聞いて身構えてしまう気持ち、よく分かります。よくある不安から、正直にお答えします。
+    </p>
+    <div class="faq-list">
+
+      <details class="faq" open>
+        <summary>「今回は難しい」を選んだら、あとで個別に頼まれるのでは？</summary>
+        <div class="a">
+          <b>お願いしません。</b>「今回は難しい」とお答えいただいた方に、そこから重ねてお声がけすることはありません。
+          くじ引きも、割り当ても、順番も、いっさいありません。
+          この調査は、断りにくい空気をつくるためのものではなく、<b>いまの実態を知るため</b>のものです。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>仕事をしているんだけど、できるのかな</summary>
+        <div class="a">
+          全体で集まるのは<b><span data-cfg-text="meetingCount">年4回</span>の運営委員会だけ</b>です。<span data-cfg-optional="meetingTime"><span data-cfg-text="meetingTime"></span>に開かれます。</span>
+          <b>それ以外は、行事のときに現地で動くほかは、基本的に在宅です。</b>やりとりはLINEとGoogleドライブが中心です。<!--
+          --><span data-cfg-optional="meetingOnline">オンライン参加も<span data-cfg-text="meetingOnline"></span>。</span>
+          <b>平日に動く必要があるのは、会計の振込作業くらいです。</b>ほかの担当は、在宅で進められる部分がほとんどです。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>朝の旗振りに、毎日立つことになるの？</summary>
+        <div class="a">
+          <b>立ちません。</b>旗振りやパトロールを実施するのはクラス委員で、本部役員はその調整をする役です。
+          「安全」という担当名から誤解されやすいところなので、はっきり書いておきます。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>ひとりで全部やるなんて無理…</summary>
+        <div class="a">
+          <b>ひとりで背負う役はありません。</b>副会長は担当を分け合い、1人が持つのは1〜2つです。
+          書記は2名、会計は2名で、確認し合いながら進めます。前年の担当や他のメンバーがついています。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>一度やったら、もう抜けられないんでしょ…？</summary>
+        <div class="a">
+          <b>任期は1年です。</b>続けるかどうかは毎年選べます。
+          ただ正直に言うと、いま人手が足りず3年続けている人が多いのが現状です。
+          だからこそ、力を貸していただけると本当に助かります。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>知り合いがいないから、ちょっと不安</summary>
+        <div class="a">
+          みんな同じスタートです。お友だちと2人1組での参加も大歓迎。
+          「ひとりだと不安」という方は、誘い合わせてどうぞ。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>話を聞いたら、断りにくくなりそう</summary>
+        <div class="a">
+          <b>聞くだけで大丈夫です。</b>説明を聞いたうえでお断りいただいて、まったく問題ありません。
+          しつこく誘うことはしません。迷っている方には、この選択肢がいちばん気楽です。
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>正直、大変って聞くけど本当のところは？</summary>
+        <div class="a">
+          忙しい時期は、あります。ごまかしません。行事が重なる時期は、連絡のやりとりが増えます。
+          ただ、集まる回数そのものは年4回で、それ以外は在宅で進められるものが大半です。<span data-cfg-optional="reducedWorkload"><br><span data-cfg-text="reducedWorkload"></span></span>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== やってみると ===== -->
+<section id="good" class="good-section">
+  <div class="container">
+    <span class="eyebrow">GOOD THINGS</span>
+    <h2>やってみると、こんないいことがあります</h2>
+    <p class="section-lead">
+      きれいごと抜きで、実際にやっている人が「これはよかった」と言うものだけを並べました。
+    </p>
+    <div class="good-grid">
+      <div class="good-card">
+        <h3>学校の「いま」が、見えるようになります</h3>
+        <p>運営委員会や行事の準備で、校長先生・教頭先生と直接話します。担任の先生以外とも顔見知りになり、学校の様子が自然と入ってくる。保護者会だけでは見えないことが、たくさんあります。</p>
+      </div>
+      <div class="good-card">
+        <h3>子どもが喜ぶ瞬間に、いちばん近くで立ち会えます</h3>
+        <p>読み聞かせ、芸術鑑賞会、ほたる観賞会。準備は正直じみた作業ですが、当日の子どもたちの反応を目の前で見られるのは、引き受けた人だけの特権です。</p>
+      </div>
+      <div class="good-card">
+        <h3>学年を越えて、保護者の知り合いができます</h3>
+        <p>同じクラスの中だけでは、なかなか広がりません。上の学年の保護者から進学や習い事の話が聞けるのは、実際とても助かります。相談できる相手が増えます。</p>
+      </div>
+      <div class="good-card">
+        <h3>できるのは、在学中の6年間だけです</h3>
+        <p>卒業してしまうと、二度と関われません。経験者から「やっておけばよかった」という声をよく聞くのは、たぶんこれが理由です。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -614,23 +828,24 @@
   </div>
 </section>
 
-<!-- ===== 応募 ===== -->
+<!-- ===== 回答 ===== -->
 <section id="form" class="form-section">
   <div class="container">
-    <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff">APPLY</span>
-    <h2>応募する・話を聞く</h2>
+    <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff">SURVEY</span>
+    <h2>意向調査に答える</h2>
     <p class="section-lead">
-      フォームから、3つのうち当てはまるものを選んでお知らせください。1分ほどで終わります。
+      3つのうち、当てはまるものを選んでください。1分ほどで終わります。
+      「今回は難しい」を選んでいただくだけでも、私たちには必要な情報です。
     </p>
     <div class="form-card">
       <div>
-        <span class="deadline-pill">受付期間　<span data-cfg-text="applyPeriod">9月18日(金) 〜 9月25日(金)</span></span>
-        <h3>応募フォーム</h3>
+        <span class="deadline-pill" data-cfg-optional="surveyPeriod">回答期間　<span data-cfg-text="surveyPeriod"></span></span>
+        <h3>意向調査フォーム</h3>
         <p>
-          「やってみます」「話を聞いてから決めたい」「単発の手伝いならできそう」の3つから選ぶだけです。
+          「やってもいい」「話を聞いてから決めたい」「今回は難しい」の3つから選ぶだけです。
           迷ったら、まん中の「話を聞いてから決めたい」を選んでください。
         </p>
-        <a class="btn disabled" id="formBtn" style="margin-top:18px" data-cfg-href="formUrl" href="#">フォームは準備中です</a>
+        <a class="btn disabled" id="formBtn" style="margin-top:18px" data-cfg-href="surveyUrl" href="#">フォームは準備中です</a>
         <div class="mail-line">
           フォームが使えない場合は、メールでも受け付けます
           <a href="mailto:irifunepta@gmail.com"><span data-cfg-text="contactMail">irifunepta@gmail.com</span></a>
@@ -638,12 +853,12 @@
         </div>
       </div>
       <div class="qr-box" id="qrBox" hidden>
-        <img data-cfg-src="qrImageUrl" src="" alt="応募フォームのQRコード">
+        <img data-cfg-src="qrImageUrl" src="" alt="意向調査フォームのQRコード">
         <div class="cap">スマートフォンで読み取れます</div>
       </div>
     </div>
     <p style="margin-top:26px;color:#dbeefb;font-size:15px;line-height:2">
-      PTAは、子どもたちの応援団です。お待ちしています。
+      正直な状況を、そのまま書きました。読んでいただき、ありがとうございました。
     </p>
   </div>
 </section>
@@ -653,7 +868,7 @@
     <span class="brand-mark"><img src="images/school-emblem.png" alt="入船小学校 校章"></span>
     <span>浦安市立入船小学校 PTA本部</span>
   </div>
-  <div><span data-cfg-text="targetYear">令和9年度</span> PTA本部メンバー・社会福祉協議会推進委員 募集</div>
+  <div><span data-cfg-text="targetYear">令和9年度</span> PTA本部・社会福祉協議会推進委員 意向調査</div>
   <div class="links">
     <a data-cfg-href="safetySiteUrl" href="https://irifune-pta.github.io/">PTA安全活動サイト</a>
     <a id="videoLink" data-cfg-href="videoUrl" href="#" hidden>PTA紹介動画</a>
@@ -693,9 +908,9 @@
 
     /* 応募フォームのURLが入っていればボタンを有効にする */
     const btn = document.getElementById('formBtn');
-    if (btn && filled(cfg.formUrl)){
+    if (btn && filled(cfg.surveyUrl)){
       btn.classList.remove('disabled');
-      btn.textContent = '応募フォームを開く';
+      btn.textContent = '意向調査フォームを開く';
       btn.setAttribute('target', '_blank');
       btn.setAttribute('rel', 'noopener');
     }
