@@ -32,7 +32,7 @@ window.CONFIG = {
 
   // ★ 意向調査フォームのURL（Googleフォームの「送信」→リンク→短縮URL）
   //    空のままだと「準備中」と表示され、ボタンが押せません
-  surveyUrl: "",
+  surveyUrl: "https://forms.gle/QfY4XBR1Qag8cGUy9",
 
   // ★ フォームのQRコード画像（images/ に置いたファイル名）
   //    例： "images/qr.png"　空のままだとQRの枠ごと非表示になります
