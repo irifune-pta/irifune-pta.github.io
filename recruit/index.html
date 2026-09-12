@@ -150,9 +150,9 @@
   .btn.disabled{background:var(--line);color:var(--ink-soft);box-shadow:0 6px 0 #c9cfd8;pointer-events:none}
   .btn.disabled::after{content:""}
 
-  /* ===== 応募3択 ===== */
+  /* ===== 意向調査4択 ===== */
   .apply-section{background:linear-gradient(180deg,var(--paper) 0%,#fff 100%)}
-  .choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:8px}
   .choice{
     background:#fff;border:1px solid var(--line);border-radius:18px;
     padding:28px 24px;position:relative;
@@ -435,17 +435,17 @@
       </p>
       <p class="lead" style="margin-top:14px">
         ただ、いきなり「引き受けてください」とは言いません。
-        まずお願いしたいのは、<b>3つから選ぶだけの意向調査</b>です。1分で終わります。
+        まずお願いしたいのは、<b>4つから選ぶだけの意向調査</b>です。1分で終わります。
       </p>
       <p class="lead" style="margin-top:14px">
         くじ引き・わりあては、いっさいありません。ぜんぶ手挙げ制です。
-        <b>「今回は難しい」と答えていただいて、まったく問題ありません。</b>
+        <b>回答そのものも任意です。難しい方は、無理に答えていただかなくて大丈夫です。</b>
         パパもママも、どちらでも歓迎です。
       </p>
     </div>
     <div class="hero-card">
       <h3>まずは、ここだけ</h3>
-      <div class="row"><span>お願いすること</span><b>3択に答えるだけ</b></div>
+      <div class="row"><span>お願いすること</span><b>4択に答えるだけ</b></div>
       <div class="row"><span>かかる時間</span><b>1分ほど</b></div>
       <div class="row"><span>選び方</span><b>すべて手挙げ制</b></div>
       <div class="row" data-cfg-optional="surveyPeriod"><span>回答期間</span><b><span data-cfg-text="surveyPeriod"></span></b></div>
@@ -578,35 +578,47 @@
     <h2>まず、意向調査にお答えください</h2>
     <p class="section-lead">
       これは応募のお願いではありません。「いま、どう思っているか」を教えていただくものです。
-      3つから選ぶだけ、1分で終わります。全世帯にお願いしています。
+      4つから選ぶだけ、1分で終わります。全世帯にお願いしています。
     </p>
     <div class="choice-grid">
       <div class="choice">
         <div class="mark">1</div>
-        <h3>やってもいい</h3>
+        <h3>来年度のPTAの活動に参加できる</h3>
         <p>引き受けてもいい、と思っていただける方。役や担当は、これから相談して決めます。いま希望が決まっていなくて大丈夫です。</p>
         <div class="note">→ あとで内容の相談をします</div>
       </div>
-      <div class="choice featured">
-        <span class="ribbon">迷ったらこちら</span>
+      <div class="choice">
         <div class="mark">2</div>
-        <h3>話を聞いてから決めたい</h3>
-        <p>内容を聞いてから判断したい方、「知り合いと一緒になら」という方は、まずはここです。二人以上でいっしょに聞いていただいても構いません。聞いたうえでお断りいただいて、まったく問題ありません。しつこく誘うことはしません。</p>
-        <div class="note">→ いちばん気楽な選択肢です</div>
+        <h3>特定の活動のみなら来年度PTAの活動に参加できる</h3>
+        <p>「これならできる」という活動だけ、無理のない範囲で関わりたい方。下の「本部役員は、実際に何をしているのか」を読んで、できそうな活動を選んでください。</p>
+        <div class="note">→ 活動を絞って相談します</div>
       </div>
       <div class="choice">
         <div class="mark">3</div>
-        <h3>今回は難しい</h3>
-        <p>それで構いません。<b>「難しい」も立派な回答です。</b>どれくらいの方がそう考えているのかが分かること自体が、私たちには必要な情報になります。理由の記入は任意です。</p>
-        <div class="note">→ 選んでいただくだけで助かります</div>
+        <h3>人が不足しているなら来年度PTAの活動に参加してもよい</h3>
+        <p>積極的にではないけれど、本当に人が足りないなら力を貸してもいい、という方。この回答も、私たちにはとても助かる情報です。</p>
+        <div class="note">→ 状況によってご相談することがあります</div>
+      </div>
+      <div class="choice featured">
+        <span class="ribbon">迷ったらこちら</span>
+        <div class="mark">4</div>
+        <h3>検討中、もう少し話を聞きたい</h3>
+        <p>内容を聞いてから判断したい方、「知り合いと一緒になら」という方は、まずはここです。二人以上でいっしょに聞いていただいても構いません。聞いたうえでお断りいただいて、まったく問題ありません。しつこく誘うことはしません。</p>
+        <div class="note">→ いちばん気楽な選択肢です</div>
       </div>
     </div>
 
     <div class="survey-note">
-      <b>1・2を選んだ方には、「どの担当なら関われそうか」もお聞きします。</b>
-      下の「本部役員は、実際に何をしているのか」に担当の一覧があります。
+      <b>あわせて、「続けてほしいと思う活動」と「関わってもいいと思う活動」もお聞きします。</b>
+      前者は、もし人数が集まらず活動を絞る場合の判断材料に。後者は、実際にご自身が関わってみたい活動を選ぶものです。
+      下の「本部役員は、実際に何をしているのか」に活動の一覧があります。
       在宅で完結するもの、学校に行くことが多いものなど、性格がかなり違います。読んでから選んでください。<br><br>
-      お友だちと2人1組での参加も歓迎です。<span data-cfg-optional="surveyAnonymity"><br><span data-cfg-text="surveyAnonymity"></span></span>
+      お子さまが複数学年にいる場合も、まとめて1回のご回答で大丈夫です。お友だちと2人1組での参加も歓迎です。<span data-cfg-optional="surveyAnonymity"><br><span data-cfg-text="surveyAnonymity"></span></span>
+    </div>
+
+    <div class="survey-note" style="margin-top:22px;border-color:var(--green-500)">
+      <b>社会福祉協議会推進委員（1名・任期2年）に関わってみたい方は、フォーム内のチェックボックスも選んでください。</b>
+      上の4つとは別の項目で、本部役員との兼任もできます。地域の福祉活動に、入船小の保護者代表として関わる役です。
     </div>
 
     <a class="btn" style="margin-top:22px" href="#form">意向調査フォームへ</a>
@@ -898,16 +910,16 @@
     <span class="eyebrow" style="background:rgba(255,255,255,.2);color:#fff">SURVEY</span>
     <h2>意向調査に答える</h2>
     <p class="section-lead">
-      3つのうち、当てはまるものを選んでください。1分ほどで終わります。
-      「今回は難しい」を選んでいただくだけでも、私たちには必要な情報です。
+      4つのうち、当てはまるものを選んでください。1分ほどで終わります。
+      「検討中、もう少し話を聞きたい」を選んでいただくだけでも助かります。
     </p>
     <div class="form-card">
       <div>
         <span class="deadline-pill" data-cfg-optional="surveyPeriod">回答期間　<span data-cfg-text="surveyPeriod"></span></span>
         <h3>意向調査フォーム</h3>
         <p>
-          「やってもいい」「話を聞いてから決めたい」「今回は難しい」の3つから選ぶだけです。
-          迷ったら、まん中の「話を聞いてから決めたい」を選んでください。
+          「来年度のPTAの活動に参加できる」「特定の活動のみなら参加できる」「人が不足しているなら参加してもよい」
+          「検討中、もう少し話を聞きたい」の4つから選ぶだけです。迷ったら「検討中、もう少し話を聞きたい」を選んでください。
         </p>
         <a class="btn disabled" id="formBtn" style="margin-top:18px" data-cfg-href="surveyUrl" href="#">フォームは準備中です</a>
         <div class="mail-line">
